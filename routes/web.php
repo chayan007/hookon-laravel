@@ -46,7 +46,7 @@ Route::group(['prefix' => 'student'], function () {
 Route::group(['prefix' => 'recruiter'], function () {
   Route::get('/login', 'RecruiterAuth\LoginController@showLoginForm')->name('login');
   Route::post('/login', 'RecruiterAuth\LoginController@login');
-  Route::post('/logout', 'RecruiterAuth\LoginController@logout')->name('logout');
+  Route::get('/logout', 'RecruiterAuth\LoginController@logout')->name('logout');
 
   Route::get('/register', 'RecruiterAuth\RegisterController@showRegistrationForm')->name('register');
   Route::post('/register', 'RecruiterAuth\RegisterController@register');

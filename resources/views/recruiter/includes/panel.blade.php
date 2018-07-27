@@ -29,7 +29,7 @@
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">Students Corner</li>
+        <li class="header">Recruiter Corner</li>*--
         <!-- Optionally, you can add icons to the links -->
         <li class=@if ( strcasecmp(substr(strrchr(url()->current(),"/"),1),'profile')==0)
         'active'
@@ -69,6 +69,29 @@
         @else
         ''
         @endif><a href="/recruiter/status"><i class="fa fa-money"></i> <span>Internship Status</span></a></li>
+        <li class="treeview">
+          <a href="#" class=@if (strcasecmp(substr(strrchr(url()->current(),"/"),1),'postcourse')==0 || strcasecmp(substr(strrchr(url()->current(),"/"),1),'editcourse')==0)
+        'active'
+        @else
+        ''
+        @endif><i class="fa fa-ra"></i> <span>Courses</span>
+            <span class="pull-right-container">
+                <i class="fa fa-sort-desc pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="/recruiter/postcourse" class=@if ( strcasecmp(substr(strrchr(url()->current(),"/"),1),'postinternsip')==0)
+        'active'
+        @else
+        ''
+        @endif>Post Course</a></li>
+            <li><a href="/recruiter/editcourse" class=@if ( strcasecmp(substr(strrchr(url()->current(),"/"),1),'editinternship')==0)
+        'active'
+        @else
+        ''
+        @endif>Edit Course</a></li>
+          </ul>
+        </li>
         <li class=@if ( strcasecmp(substr(strrchr(url()->current(),"/"),1),'support')==0)
         'active'
         @else

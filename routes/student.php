@@ -12,9 +12,7 @@ Route::get('/home', function () {
 Route::get('/profile',function(){
     return view('student.pages.profile');
 })->name('dashboard');
-Route::get('/edit', function () {
-    return view('student.pages.edit');
-})->name('edit');
+Route::get('/edit', 'StudentController@predict')->name('edit');
 Route::post('/edit', 'StudentController@edit');
 Route::get('/status', function () {
     return view('student.pages.status');

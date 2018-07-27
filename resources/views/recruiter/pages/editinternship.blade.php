@@ -6,7 +6,7 @@
 @section('content')
      <div class="box box-danger collapsed-box">
         <div class="box-header with-border">
-          <h3 class="box-title">Expandable</h3>
+          <h3 class="box-title">Edit Internship {{Auth::user()->id}}</h3>
           <div class="box-tools pull-right">
             <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
           </div><!-- /.box-tools -->

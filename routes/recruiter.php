@@ -29,3 +29,9 @@ Route::get('/postinternship', function () {
 Route::get('/editinternship', function () {
     return view('recruiter.pages.editinternship');
 });
+Route::get('/editcourse', function () {
+    return view('recruiter.pages.editcourse');
+});
+Route::get('/postcourse', function () {
+    return view('recruiter.pages.postcourse');
+});
