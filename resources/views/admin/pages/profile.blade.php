@@ -18,10 +18,6 @@
             <strong>{{Auth::user()->phone}}</strong><br>
             <a href="#" class="badge badge-primary" style="padding:10px; margin:10px;">Email :</a>
             <strong>{{Auth::user()->email}}</strong><br>
-            <a href="#" class="badge badge-primary" style="padding:10px; margin:10px;">Date Of Birth :</a>
-            <strong>{{Auth::user()->name}}</strong><br>
-            <a href="#" class="badge badge-primary" style="padding:10px; margin:10px;">Company :</a>
-            <strong>{{Auth::user()->name}}</strong><br>
         </div><!-- /.box-body -->
       </div><!-- /.box -->
 @stop

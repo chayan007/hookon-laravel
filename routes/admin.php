@@ -22,12 +22,15 @@ Route::get('/recruiters', function () {
 Route::get('/internships', function () {
     return view('admin.pages.internships');
 })->name('internship');
-Route::get('/internshipstaus', function () {
-    return view('admin.pages.internshipstatus');
+Route::get('/istatus', function () {
+    return view('admin.pages.istatus');
 })->name('internship status');
 Route::get('/courses', function () {
     return view('admin.pages.courses');
 })->name('courses');
+Route::get('/cstatus', function () {
+    return view('admin.pages.cstatus');
+})->name('courses status');
 Route::get('/settings', function () {
     return view('admin.pages.settings');
 })->name('settings');
