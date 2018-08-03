@@ -145,8 +145,8 @@ body {
 }
 .btn-primary,
 .btn-primary:active {
-  background-color: #ff3366 !important;
-  border-color: #ff3366 !important;
+  background-color: #D95058 !important;
+  border-color: #D95058 !important;
   color: #ffffff !important;
 }
 .btn-primary:hover,
@@ -649,16 +649,6 @@ a:hover {
   transform: rotate(45deg);
   width: 14px;
 }
-.form-control {
-  background-color: #f5f5f5;
-  box-shadow: none;
-  color: #565656;
-  font-family: 'Rubik', sans-serif;
-  font-size: 1rem;
-  line-height: 1.43;
-  min-height: 3.5em;
-  padding: 1.07em .5em;
-}
 .form-control > .mbr-iconfont {
   font-size: 1.6rem;
 }
@@ -721,7 +711,7 @@ pre {
   box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
 }
 .mbr-form .input-group-btn button[type="submit"] {
-  border-radius: 100px !important;
+
   padding: 1rem 3rem;
 }
 .mbr-form .input-group-btn button[type="submit"]:hover {
@@ -1755,7 +1745,6 @@ body {
 }
 .cid-qXwjcYsW1c {
   padding-top: 30px;
-  padding-bottom: 30px;
   background-color: #efefef;
 }
 .cid-qXwjcYsW1c .card-box {
@@ -1794,8 +1783,7 @@ body {
   transition: box-shadow 0.3s;
 }
 .cid-qXzefyytyw {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 25px;
   background-color: #fafafa;
 }
 .cid-qXzefyytyw h3 {
