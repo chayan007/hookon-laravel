@@ -7,14 +7,14 @@ use App\Student;
 
 class StudentController extends Controller
 {
-    public function predict($id)
+    public function predict()
     {
-        $student=Student::firstOrFail($id);
-        return view('student.pages.edit',['student'=>$student]);
+
+        return view('student.pages.edit');
     }
     public function edit(Request $request)
     {
-        $student= App\Student::where('id',$request->user()->id)->firstOrFail();
+        $student= App\Student::where('id',Auth::user()->id)->firstOrFail();
         if($request->name != null){
              $student->name=$request->name;
         }

@@ -22,6 +22,7 @@ class CreateStudentsTable extends Migration
             $table->string('skills')->default(' ');
             $table->string('photo_url')->default(' ');
             $table->string('cv_url')->default(' ');
+            $table->string('api_id');
             $table->rememberToken();
             $table->timestamps();
         });

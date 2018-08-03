@@ -68,7 +68,7 @@
                     <br/>
                       <p class="small text-center" >Or, sign up quickly using other web services </p>
                       <div class="row">
-                            <div class="icon-wrapper col-4"><a href=""><img src="{{asset('assets/ExtraAssets/linkedin.png')}}" style="margin-left: 25%" height="55px" width="55px" class="text-center" alt="linkedin Icon"></a> </div>
+                            <div class="icon-wrapper col-4"><a href="google_redirect"><img src="{{asset('assets/ExtraAssets/linkedin.png')}}" style="margin-left: 25%" height="55px" width="55px" class="text-center" alt="linkedin Icon"></a> </div>
                             <div class="icon-wrapper col-4"><a href=""><img src="{{asset('assets/ExtraAssets/github-logo.png')}}" height="55px" width="55px" style="margin-left: 25%" alt="Github Icon"></a></div>
                             <div class="icon-wrapper col-4 pl-auto pr-auto"><a href=""><img src="{{asset('assets/ExtraAssets/facebook.pn')}}g" height="55px" width="55px" style="margin-left: 25%" alt="Facebook Icon"></a></div>
                         </div>

@@ -48,6 +48,13 @@ Route::group(['prefix' => 'student'], function () {
   Route::post('/login', 'StudentAuth\LoginController@login');
   Route::get('/logout', 'StudentAuth\LoginController@logout')->name('logout');
 
+  /*---Socialite Google login*/
+  Route::get('/google_redirect', 'StudentAuth\LoginController@redirectToProvider');
+  Route::get('/callback', 'StudentAuth\LoginController@handleProviderCallback');
+  /*---Socialite Google login end---*/
+
+
+
   Route::get('/register', 'StudentAuth\RegisterController@showRegistrationForm')->name('register');
   Route::post('/register', 'StudentAuth\RegisterController@register');
 

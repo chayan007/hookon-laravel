@@ -72,6 +72,7 @@ class RegisterController extends Controller
             'skills'=> isset($data['skills']) ? $data['skills']:' ',
             'photo_url'=> isset($data['photo_url']) ? $data['photo_url']:' ',
             'cv_url'=> isset($data['cv_url']) ? $data['cv_url']:' ',
+            'api_id'=> isset($data['api_id']) ? $data['api_id']:' ',
         ]);
     }
 
