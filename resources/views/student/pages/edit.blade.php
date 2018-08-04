@@ -12,7 +12,7 @@
           </div><!-- /.box-tools -->
         </div><!-- /.box-header -->
         <div class="box-body">
-            <form method="POST" action="/student/edit" enctype="multipart/form-data">
+            <form method="POST" action="/student/edit1" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                 <label for="">Name</label>
