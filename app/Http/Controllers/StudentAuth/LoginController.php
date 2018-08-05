@@ -38,36 +38,35 @@ class LoginController extends Controller
        */
       public function handleProviderCallback()
       {
-          try {
-              $user = Socialite::driver('google')->user();
-          } catch (\Exception $e) {
-              echo $e->getMessage();
-              //return redirect('/student/login');
-          }
+          // try {
+            $user = Socialite::driver('google')->stateless()->user();
+          //   } //catch (\Exception $e) {
+          //     return redirect('/student/login');
+          // }
 
+          //return $user->name;
           /*// only allow people with @company.com to login
           if(explode("@", $user->email)[1] !== 'company.com'){
               return redirect()->to('/');
           }*/
 
           // check if they're an existing user
-          //$existingUser = User::where('email', $user->email)->first();
+          $existingUser = Student::where('email', $user->email)->first();
 
-          /*if($existingUser){
+          if($existingUser){
               // log them in
               auth()->login($existingUser, true);
-          } else {*/
+          } else {
               // create a new user
               $newUser                  = new Student;
-              dd($user);
               $newUser->name            = $user->name;
               $newUser->email           = $user->email;
-              $newUser->google_id       = $user->id;
+              $newUser->password     = $user->id;
               $newUser->save();
 
               auth()->login($newUser, true);
-          //}
-          return redirect()->to('/');
+          }
+          return redirect()->to('/student/profile');
       }
 
 
