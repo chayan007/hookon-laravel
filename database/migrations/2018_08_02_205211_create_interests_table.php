@@ -22,6 +22,8 @@ class CreateInterestsTable extends Migration
             $table->string('course');
             $table->string('virtual');
             $table->string('comments');
+            $table->unsignedInteger('location_id');
+            $table->foreign('location_id')->references('id')->on('locations'); //make sure this location pops in modal..
             $table->timestamps();
         });
     }

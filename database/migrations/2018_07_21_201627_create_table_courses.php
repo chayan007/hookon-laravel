@@ -24,6 +24,10 @@ class CreateTableCourses extends Migration
             $table->string('domain');
             $table->string('syllabus');
             $table->string('about');
+            $table->unsignedInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
+            $table->unsignedInteger('location_id');
+            $table->foreign('location_id')->references('id')->on('locations');
             $table->timestamps();
         });
     }
