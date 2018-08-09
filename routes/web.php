@@ -28,6 +28,8 @@ Route::get('/specific_course', function(){
    return view('specific_course');
 });
 
+Route::get('/search_skills', 'SearchController@search_skills');
+Route::get('/search_location', 'SearchController@search_location');
 
 Route::group(['prefix' => 'admin'], function () {
   Route::get('/login', 'AdminAuth\LoginController@showLoginForm')->name('login');
