@@ -15,13 +15,13 @@
             <a href="#" class="badge badge-primary" style="padding:10px; margin:10px;">Name :</a>
             <strong>{{Auth::user()->name}}</strong><br>
             <a href="#" class="badge badge-primary" style="padding:10px; margin:10px;">Phone :</a>
-            <strong>{{Auth::user()->name}}</strong><br>
+            <strong>+91 {{Auth::user()->phone}}</strong><br>
             <a href="#" class="badge badge-primary" style="padding:10px; margin:10px;">Email :</a>
             <strong>{{Auth::user()->email}}</strong><br>
             <a href="#" class="badge badge-primary" style="padding:10px; margin:10px;">Date Of Birth :</a>
-            <strong>{{Auth::user()->name}}</strong><br>
+            <strong>{{Auth::user()->dob}}</strong><br>
             <a href="#" class="badge badge-primary" style="padding:10px; margin:10px;">Skills :</a>
-            <strong>{{Auth::user()->name}}</strong><br>
+            <strong>{{Auth::user()->skills}}</strong><br>
         </div><!-- /.box-body -->
       </div><!-- /.box -->
 @stop

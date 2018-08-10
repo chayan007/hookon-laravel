@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Student;
 
 class StudentController extends Controller
@@ -12,9 +13,14 @@ class StudentController extends Controller
 
         return view('student.pages.edit');
     }
-    public function edit(Request $request)
+    public function edit1(Request $request)
     {
         $student= App\Student::where('id',1)->firstOrFail();
+        try{
+          $student= Student::where('id',Auth::user()->id)->firstOrFail();
+        }catch(Exception $e){
+          redirect('/student/profile');
+        }
         if($request->name != null){
              $student->name=$request->name;
              $student->save();
@@ -31,19 +37,25 @@ class StudentController extends Controller
             $student->skills = $request->skills;
             $student->save();
         }
-        if ($request->photo != null) {
+        if ($request->hasFile('photo')) {
             $file = $request->photo;
             $path = $file->store('public/images/profile');
             $student->photo_url = $path;
             $student->save();
         }
-        if ($request->name != null) {
+        if ($request->hasFile('cv')) {
             $file = $request->cv;
             $path = $file->store('public/documents');
             $student->cv_url = $path;
             $student->save();
         }
+<<<<<<< HEAD
         redirect('/student/profile');
+=======
+        $student->save();
+        //dd($student);
+        return redirect('/student/profile');
+>>>>>>> 24a0be95642938628fed08b6535961db7755a99b
     }
     public function support(Request $request)
     {

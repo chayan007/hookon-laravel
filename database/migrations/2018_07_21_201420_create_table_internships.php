@@ -27,6 +27,10 @@ class CreateTableInternships extends Migration
             $table->string('location');
             $table->string('duration');
             $table->string('stipend');
+            $table->unsignedInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
+            $table->unsignedInteger('location_id');
+            $table->foreign('location_id')->references('id')->on('locations');
             $table->timestamps();
         });
     }
