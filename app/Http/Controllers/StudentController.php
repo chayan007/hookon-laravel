@@ -49,13 +49,9 @@ class StudentController extends Controller
             $student->cv_url = $path;
             $student->save();
         }
-<<<<<<< HEAD
-        redirect('/student/profile');
-=======
         $student->save();
         //dd($student);
         return redirect('/student/profile');
->>>>>>> 24a0be95642938628fed08b6535961db7755a99b
     }
     public function support(Request $request)
     {
