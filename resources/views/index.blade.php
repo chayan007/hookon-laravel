@@ -29,17 +29,17 @@
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="https://mobirise.com"><span class="mbri-target mbr-iconfont mbr-iconfont-btn"></span>
+                    <a class="nav-link link text-white display-4" href=""><span class="mbri-target mbr-iconfont mbr-iconfont-btn"></span>
 
                         Students</a>
-                </li><li class="nav-item"><a class="nav-link link text-white display-4" href="https://mobirise.com"><span class="mbri-briefcase mbr-iconfont mbr-iconfont-btn"></span>
-                        Recruiters</a></li><li class="nav-item"><a class="nav-link link text-white display-4" href="https://mobirise.com"><span class="mbri-devices mbr-iconfont mbr-iconfont-btn"></span>
+                </li><li class="nav-item"><a class="nav-link link text-white display-4" href=""><span class="mbri-briefcase mbr-iconfont mbr-iconfont-btn"></span>
+                        Recruiters</a></li><li class="nav-item"><a class="nav-link link text-white display-4" href=""><span class="mbri-devices mbr-iconfont mbr-iconfont-btn"></span>
                         Courses</a></li>
                 <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="https://mobirise.com">
+                    <a class="nav-link link text-white display-4" href="">
                         <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>Search &nbsp;</a>
                 </li></ul>
-            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="https://mobirise.com"><span class="mbrib-edit mbr-iconfont mbr-iconfont-btn"></span>
+            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="/student/register"><span class="mbrib-edit mbr-iconfont mbr-iconfont-btn"></span>
                     REGISTER!
                 </a></div>
         </div>
@@ -58,8 +58,8 @@
                 <h3 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1" style="color: #fff;">&nbsp;Connecting Talents and Companies</h3>
 
                 <!--<p class="mbr-text pb-3 mbr-fonts-style display-5" style="color: #000;">Getting Internships made simple</p>-->
-                <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" href="https://mobirise.com">I NEED INTERNSHIPS</a>
-                    <a class="btn btn-md btn-white-outline display-4" href="https://mobirise.com">I NEED SKILLS</a></div>-->
+                <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" href="/search_internships">I NEED INTERNSHIPS</a>
+                    <a class="btn btn-md btn-white-outline display-4" href="/search_course">I NEED SKILLS</a></div>-->
 
                 <!--<a class="cta" href="search.html">
                             <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -552,5 +552,5 @@
 </section>
 
 
-
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.js"></script>
   @endsection
