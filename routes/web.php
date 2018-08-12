@@ -51,10 +51,19 @@ Route::group(['prefix' => 'student'], function () {
   Route::get('/logout', 'StudentAuth\LoginController@logout')->name('logout');
 
   /*---Socialite Google login*/
-  Route::get('/google_redirect', 'StudentAuth\LoginController@redirectToProvider');
-  Route::get('/callback', 'StudentAuth\LoginController@handleProviderCallback');
+  Route::get('/google_redirect', 'StudentAuth\LoginController@redirectToGoogle');
+  Route::get('/g_callback', 'StudentAuth\LoginController@handleGoogleCallback');
   /*---Socialite Google login end---*/
 
+  /*---Socialite FB login*/
+  Route::get('/fb_redirect', 'StudentAuth\LoginController@redirectToFB');
+  Route::get('/fb_callback', 'StudentAuth\LoginController@handleFBCallback');
+  /*---Socialite FB login end---*/
+
+  /*---Socialite LinkedIn login*/
+  Route::get('/linkedin_redirect', 'StudentAuth\LoginController@redirectToLinkedIn');
+  Route::get('/linkedin_callback', 'StudentAuth\LoginController@handleLinkedInCallback');
+  /*---Socialite LinkedIn login end---*/
 
 
   Route::get('/register', 'StudentAuth\RegisterController@showRegistrationForm')->name('register');

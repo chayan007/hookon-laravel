@@ -5,8 +5,8 @@
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/style.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 <body>
 <div class="container-fluid" style=" padding:0 !important;margin: 0 !important;">
@@ -68,9 +68,9 @@
                     <br/>
                       <p class="small text-center" >Or, sign up quickly using other web services </p>
                       <div class="row">
-                            <div class="icon-wrapper col-4"><a href="google_redirect"><img src="{{asset('assets/ExtraAssets/linkedin.png')}}" style="margin-left: 25%" height="55px" width="55px" class="text-center" alt="linkedin Icon"></a> </div>
-                            <div class="icon-wrapper col-4"><a href=""><img src="{{asset('assets/ExtraAssets/github-logo.png')}}" height="55px" width="55px" style="margin-left: 25%" alt="Github Icon"></a></div>
-                            <div class="icon-wrapper col-4 pl-auto pr-auto"><a href=""><img src="{{asset('assets/ExtraAssets/facebook.pn')}}g" height="55px" width="55px" style="margin-left: 25%" alt="Facebook Icon"></a></div>
+                            <div class="col-4"><a href="google_redirect"><i class="fab fa-google ml-auto mr-auto" style="display:block;"></i> </div>
+                            <div class="col-4"><a href="fb_redirect"><i class="fab fa-facebook ml-auto mr-auto" style="display:block;"></i></a></div>
+                            <div class="col-4"><a href="linkedin_redirect"><i class="fab fa-linkedin ml-auto mr-auto" style="display:block;"></i></a></div>
                         </div>
                         <br/>
                     <p class="small text-center" >If you are already an member, then <a href="#">Sign in</a></p>

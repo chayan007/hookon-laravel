@@ -41,4 +41,16 @@ return [
           'redirect'      => env('GOOGLE_REDIRECT')
       ],
 
+    'facebook' => [
+          'client_id' => env('FB_CLIENT_ID'),
+          'client_secret' => env('FB_CLIENT_SECRET'),
+          'redirect' =>  env('FB_REDIRECT')
+      ],
+      
+      'linkedin' => [
+            'client_id' => env('LI_CLIENT_ID'),
+            'client_secret' => env('LI_CLIENT_SECRET'),
+            'redirect' =>  env('LI_REDIRECT')
+        ],
+
 ];

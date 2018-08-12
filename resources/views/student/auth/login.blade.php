@@ -9,10 +9,11 @@
     <link href="{{asset('assets/style.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
 </head>
 <body>
-  
+
 <div class="container-fluid" style=" padding:0 !important;margin: 0 !important;">
     <div class="col-md-12" style=" height: 100vh;">
        <div class="row">
@@ -57,11 +58,11 @@
 
                       <p class="small text-center" >Or, sign in quickly using other web services </p>
                       <div class="row">
-                            <div class="icon-wrapper col-4"><a href=""><img src="{{asset('assets/ExtraAssets/linkedin.png')}}" style="margin-left: 25%" height="55px" width="55px" class="text-center" alt="linkedin Icon"></a> </div>
-                            <div class="icon-wrapper col-4"><a href=""><img src="{{asset('assets/ExtraAssets/github-logo.png')}}" height="55px" width="55px" style="margin-left: 25%" alt="Github Icon"></a></div>
-                            <div class="icon-wrapper col-4 pl-auto pr-auto"><a href=""><img src="{{asset('assets/ExtraAssets/facebook.png')}}" height="55px" width="55px" style="margin-left: 25%" alt="Facebook Icon"></a></div>
-                        </div>
-                        <br/>
+                        <div class="col-4"><a href="google_redirect"><i class="fab fa-google ml-auto mr-auto" style="display:block;"></i> </div>
+                        <div class="col-4"><a href="fb_redirect"><i class="fab fa-facebook ml-auto mr-auto" style="display:block;"></i></a></div>
+                        <div class="col-4"><a href="linkedin_redirect"><i class="fab fa-linkedin ml-auto mr-auto" style="display:block;"></i></a></div>
+                      </div>
+                    <br/>
 
                 </div>
             </div>

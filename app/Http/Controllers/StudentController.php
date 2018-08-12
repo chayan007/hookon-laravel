@@ -15,7 +15,7 @@ class StudentController extends Controller
     }
     public function edit1(Request $request)
     {
-        $student= App\Student::where('id',1)->firstOrFail();
+        //$student= App\Student::where('id',1)->firstOrFail();
         try{
           $student= Student::where('id',Auth::user()->id)->firstOrFail();
         }catch(Exception $e){
