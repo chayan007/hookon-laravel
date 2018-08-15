@@ -15,13 +15,12 @@
 <div class="container-fluid" style=" padding:0 !important;margin: 0 !important;">
     <div class="col-md-12" style=" height: 100vh;">
        <div class="row">
-            <div class="col-md-6 signup_login_hero" style="background-image: url({{asset('assets/ExtraAssets/rawpixel-658248-unsplash.jpg')}});
-                background-size: cover; background-position: 50% 50%; height: 100vh;"></div>
-            <div class="col-12 col-md-6 signup_login_content" style=" height: 100vh;">
+
+            <div class="col-12 col-md-6 mx-auto" style=" height: 100vh;">
 
                 <form method="POST" action="{{ url('/recruiter/login') }}">
                     @csrf
-                   <h1 class="display-4 text-center font-weight-bold">Sign In.</h1><br/>
+                   <h1 class="display-6 text-center font-weight-bold mt-5">Recruiter sign in</h1><br/>
                     <div class="col-md-8 ml-auto mr-auto">
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email">E-Mail Address</label>
@@ -50,19 +49,19 @@
                     </div>
                 </form>
 
-                <div class="col-md-8 ml-auto mr-auto">
+                <!--<div class="col-md-8 ml-auto mr-auto">
                     <br/>
                     <p class="text-center"><a href="#" class="">Forget Password</a></p>
 
                       <p class="small text-center" >Or, sign in quickly using other web services </p>
                       <div class="row">
-                            <div class="icon-wrapper col-4"><a href=""><img src="{{asset('assets/ExtraAssets/linkedin.png')}}" style="margin-left: 25%" height="55px" width="55px" class="text-center" alt="linkedin Icon"></a> </div>
-                            <div class="icon-wrapper col-4"><a href=""><img src="{{asset('assets/ExtraAssets/github-logo.png')}}" height="55px" width="55px" style="margin-left: 25%" alt="Github Icon"></a></div>
-                            <div class="icon-wrapper col-4 pl-auto pr-auto"><a href=""><img src="{{asset('assets/ExtraAssets/facebook.png')}}" height="55px" width="55px" style="margin-left: 25%" alt="Facebook Icon"></a></div>
-                        </div>
+                            <div class="icon-wrapper col-4" id="google-icon"><a href="google_redirect" style="text-decoration:none;"><i class="fab fa-google ml-auto mr-auto" style="display:block;color: #3cba54;"></i> </div>
+                            <div class="col-4"><a href="fb_redirect" style="text-decoration:none;"><i class="fab fa-facebook ml-auto mr-auto" style="display:block;color: #3B5998;"></i></a></div>
+                            <div class="col-4"><a href="linkedin_redirect" style="text-decoration:none;"><i class="fab fa-linkedin ml-auto mr-auto" style="display:block;color: #0077B5;"></i></a></div>
+                      </div>
                         <br/>
 
-                </div>
+                </div>-->
             </div>
         </div>
     </div>

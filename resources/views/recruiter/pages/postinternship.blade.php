@@ -12,7 +12,7 @@
           </div><!-- /.box-tools -->
         </div><!-- /.box-header -->
         <div class="box-body">
-          <form method="POST" action="/student/edit" enctype="multipart/form-data">
+          <form method="POST" action="/recruiter/post_internship" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                 <label for="">Company Name</label>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="form-group">
                 <label for="">About Company</label>
-                <textarea class="form-control" name="desc" id="" rows="5" placeholder="Write few words about your Company"></textarea>
+                <textarea class="form-control" name="about" id="" rows="5" placeholder="Write few words about your Company"></textarea>
                 <small id="helpId" class="form-text text-muted">Just to let Interns know about Company background</small>
                 </div>
                 <div class="form-group">

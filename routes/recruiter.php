@@ -15,7 +15,8 @@ Route::get('/profile', function () {
 Route::get('/edit', function () {
     return view('recruiter.pages.edit');
 })->name('edit');
-Route::post('/edit', 'StudentController@edit');
+Route::post('/post_internship', 'RecruiterController@postInternship');
+Route::post('/post_course','RecruiterController@postCourse');
 Route::get('/status', function () {
     return view('recruiter.pages.status');
 })->name('status');

@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{asset('assets/style.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/style.css')}}">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 <body>
 <div class="container-fluid" style=" padding:0 !important;margin: 0 !important;">
     <div class="col-md-12" style=" height: 100vh;">
        <div class="row">
-            <div class="col-md-6 signup_login_hero" style="background-image: url({{asset('assets/ExtraAssets/austin-chan-275638-unsplash.jpg')}});
-                background-size: cover; background-position: 50% 50%; height: 100vh;"></div>
-            <div class="col-12 col-md-6 signup_login_content" style=" height: 100vh;">
+
+            <div class="col-12 col-md-6 mx-auto" style=" height: 100vh;">
 
                 <form method="POST" action="/student/register">
                     @csrf
+                    <h1 class="display-6 text-center font-weight-bold mt-4">Register</h1><br/>
                     <div class="col-md-8 ml-auto mr-auto">
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name">Name</label>
@@ -68,12 +69,12 @@
                     <br/>
                       <p class="small text-center" >Or, sign up quickly using other web services </p>
                       <div class="row">
-                            <div class="col-4"><a href="google_redirect"><i class="fab fa-google ml-auto mr-auto" style="display:block;"></i> </div>
-                            <div class="col-4"><a href="fb_redirect"><i class="fab fa-facebook ml-auto mr-auto" style="display:block;"></i></a></div>
-                            <div class="col-4"><a href="linkedin_redirect"><i class="fab fa-linkedin ml-auto mr-auto" style="display:block;"></i></a></div>
+                            <div class="icon-wrapper col-4" id="google-icon"><a href="google_redirect" style="text-decoration:none;"><i class="fab fa-google ml-auto mr-auto" style="display:block;color: #3cba54;"></i> </div>
+                            <div class="col-4"><a href="fb_redirect" style="text-decoration:none;"><i class="fab fa-facebook ml-auto mr-auto" style="display:block;color: #3B5998;"></i></a></div>
+                            <div class="col-4"><a href="linkedin_redirect" style="text-decoration:none;"><i class="fab fa-linkedin ml-auto mr-auto" style="display:block;color: #0077B5;"></i></a></div>
                         </div>
                         <br/>
-                    <p class="small text-center" >If you are already an member, then <a href="#">Sign in</a></p>
+                    <p class="small text-center" >If you are already an member, then <a href="login">Sign in</a></p>
                 </div>
             </div>
         </div>

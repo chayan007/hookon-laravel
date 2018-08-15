@@ -100,6 +100,47 @@
     <div class="container">
        <div class="row">
 
+        @foreach($view_internship as $view_internship)
+         <div class="p-3 col-12 col-lg-4 ">
+             <div class="pb-3 pt-3" style="background-color: #fff;">
+                <div class="row">
+                     <img src="{{asset($view_internship->logo_url)}}" class="search-images" class="search-cards-style" style="margin: 0 auto;height: 120px;width: 120px; border-radius: 50%;border: 5px solid #D84F57">
+                </div>
+
+
+             </div>
+             <div class="card-box p-3" >
+                 <h4 class="card-title py-3 mbr-fonts-style display-7">
+                     Company: {{$view_internship->company}}
+                 </h4>
+                 <p class="card-title mbr-text mbr-fonts-style display-7">
+                     Profile: {{$view_internship->profile}}
+                 </p>
+                 <p class="mbr-text-intenship mbr-fonts-style display-6">
+                     Location: {{$view_internship->location}}
+                 </p>
+                 <p class="mbr-text-intenship mbr-fonts-style display-7">
+                     Duration: {{$view_internship->duration}}
+                 </p>
+                 <p class="mbr-text-intenship mbr-fonts-style display-7">
+                    No of Stipends: {{$view_internship->stipend}}
+                 </p>
+                 <p class="mbr-text-intenship mbr-fonts-style display-7">
+                     Starts from : 12/12/18
+                 </p>
+                 <div class="buttonlist col-md-12 col-12 pt-4" >
+                    <div class="row">
+                         <a class="btn btn-primary ml-0 mr-2" style="width: 50%;" href="#" role="button">
+                             Details
+                         </a>
+                         <a class="btn btn-primary ml-0 mr-0" style="width: 46.8%;" href="#" role="button">
+                             Apply
+                         </a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         @endforeach
 
             <div class="p-3 col-12 col-lg-4 ">
                 <div class="pb-3 pt-3" style="background-color: #fff;">

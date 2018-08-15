@@ -98,6 +98,7 @@
     <div class="container">
        <div class="row">
 
+         @foreach($view_course as $view_course)
 
             <div class="p-3 col-12 col-lg-4 ">
                 <div class="pb-3 pt-3" style="background-color: #fff;">
@@ -109,35 +110,37 @@
                 </div>
                 <div class="card-box p-3" >
                     <h4 class="card-title py-3 mbr-fonts-style display-7">
-                        _Company Name_
+                        Company: {{$view_course->company}}
                     </h4>
                     <p class="card-title mbr-text mbr-fonts-style display-7">
-                       _Internship Profile_
+                        Course: {{$view_course->course}}
                     </p>
                     <p class="mbr-text-intenship mbr-fonts-style display-6">
-                        Location :
+                        Location : {{$view_course->location}}
                     </p>
                     <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Duration :
+                        Domain: {{$view_course->domain}}
                     </p>
                     <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Stipend :
+                        Duration : 2 months
                     </p>
                     <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Starts from :
+                        Starts from : 12/12/18
                     </p>
                     <div class="buttonlist col-md-12 col-12 pt-4" >
                        <div class="row">
                             <a class="btn btn-primary ml-0 mr-2" style="width: 50%;" href="#" role="button">
-                                <span class="fa fa-bookmark"></span>
+                                Details
                             </a>
                             <a class="btn btn-primary ml-0 mr-0" style="width: 46.8%;" href="#" role="button">
-                                <span class="fa fa-eye"></span>
+                                Apply
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+
+            @endforeach
 
             <div class="p-3 col-12 col-lg-4 ">
                 <div class="pb-3 pt-3" style="background-color: #fff;">

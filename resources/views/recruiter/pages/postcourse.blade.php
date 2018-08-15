@@ -12,7 +12,7 @@
           </div><!-- /.box-tools -->
         </div><!-- /.box-header -->
         <div class="box-body">
-          <form action="/recruiter/postcourse" method="POST">
+          <form action="/recruiter/post_course" method="POST">
               @csrf
               <div class="form-group">
                 <label for="">Course Name</label>
@@ -37,9 +37,9 @@
               <div class="form-group">
                 <label for="">Location</label>
                 <select class="form-control" name="location" id="">
-                  <option></option>
-                  <option></option>
-                  <option></option>
+                  <option>Virtual</option>
+                  <option>Kolkata</option>
+                  <option>Patna</option>
                 </select>
               </div>
               <div class="form-group">
@@ -60,7 +60,7 @@
                 <label for="">Course Syllabus</label>
                 <textarea class="form-control" name="syllabus" id="" rows="8"></textarea>
               </div>
-              <button type="button" name="" id="" class="btn btn-light btn-lg btn-block">Add Course</button>
+              <button type="submit" name="" id="" class="btn btn-success btn-lg btn-block">Add Course</button>
           </form>
         </div><!-- /.box-body -->
       </div><!-- /.box -->
