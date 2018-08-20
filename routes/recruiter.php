@@ -24,15 +24,11 @@ Route::get('/support', function () {
     return view('recruiter.pages.support');
 })->name('support');
 Route::post('/edit', 'StudentController@support');
-Route::get('/postinternship', function () {
-    return view('recruiter.pages.postinternship');
-});
+Route::get('/postinternship', 'RecruiterController@view_post_internship');
 Route::get('/editinternship', function () {
     return view('recruiter.pages.editinternship');
 });
 Route::get('/editcourse', function () {
     return view('recruiter.pages.editcourse');
 });
-Route::get('/postcourse', function () {
-    return view('recruiter.pages.postcourse');
-});
+Route::get('/postcourse', 'RecruiterController@view_post_course');

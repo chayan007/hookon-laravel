@@ -6,18 +6,26 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Internship;
 use App\Course;
+use App\Location;
 use DB;
-use View;
 
 class RecruiterController extends Controller
 {
   public function view_internship(Request $request){
       $view_internship = Internship::all();
-      return View::make('search_internship')->with('view_internship', $view_internship);
+      return view('search_internship')->with('view_internship', $view_internship);
   }
   public function view_courses(Request $request){
       $view_course = Course::all();
-      return View::make('search_course')->with('view_course', $view_course);
+      return view('search_course')->with('view_course', $view_course);
+  }
+  public function view_post_internship(Request $request){
+      $locations = Location::all();
+      return view('recruiter.pages.postinternship')->with('locations', $locations);
+  }
+  public function view_post_course(Request $request){
+      $locations = Location::all();
+      return view('recruiter.pages.postcourse')->with('locations', $locations);
   }
   public function postInternship(Request $request)
   {

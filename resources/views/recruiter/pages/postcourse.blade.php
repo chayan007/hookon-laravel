@@ -37,9 +37,9 @@
               <div class="form-group">
                 <label for="">Location</label>
                 <select class="form-control" name="location" id="">
-                  <option>Virtual</option>
-                  <option>Kolkata</option>
-                  <option>Patna</option>
+                  @foreach($locations as $locations)
+                    <option>{{$locations->location_name}}</option>
+                 @endforeach
                 </select>
               </div>
               <div class="form-group">

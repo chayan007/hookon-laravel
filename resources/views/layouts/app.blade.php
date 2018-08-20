@@ -13,8 +13,8 @@
   <title>Home</title>
   <link rel="stylesheet" href="{{ asset('assets/web/assets/mobirise-icons/mobirise-icons.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css') }} ">
-  <link rel="stylesheet" href="{{ asset('assets/tether/tether.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
+  <!--<link rel="stylesheet" href="{{ asset('assets/tether/tether.min.css') }}">-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap-grid.min.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap-reboot.min.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/dropdown/css/style.css') }}">
@@ -22,11 +22,10 @@
   <link rel="stylesheet" href="{{ asset('assets/as-pie-progress/css/progress.min.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/socicon/css/styles.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/theme/css/style.css') }}">
-  <link rel="stylesheet" href="{{ asset('assets/mobirise/css/mbr-additional.css') }}" type="text/css">
+  <link rel="stylesheet" href="{{ asset('assets/mobirise/css/mbr-additional.css') }}" type="text/css">-->
   <link rel="stylesheet" href="{{ asset('assets/ExtraAssets/owl.carousel.min.css') }}"/>
   <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/ExtraAssets/owl.theme.default.min.css') }}">
-
 </head>
 <body>
 
@@ -38,13 +37,14 @@
      </div>-->  <!--end of splash screen-->
 
       @yield('content')
-
-
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <script src="{{ asset('assets/ExtraAssets/owl.carousel.min.js') }}"></script>
-      <script src="{{ asset('assets/popper/popper.min.js') }}"></script>
-      <script src="{{ asset('assets/tether/tether.min.js') }}"></script>
-      <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
-      <script src="{{ asset('assets/dropdown/js/script.min.js') }}"></script>
+      <!--<script src="{{ asset('assets/popper/popper.min.js') }}"></script>-->
+      <!--<script src="{{ asset('assets/tether/tether.min.js') }}"></script>
+      <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>-->
+      <!--<script src="{{ asset('assets/dropdown/js/script.min.js') }}"></script>
       <script src="{{ asset('assets/touchswipe/jquery.touch-swipe.min.js') }}"></script>
       <script src="{{ asset('assets/viewportchecker/jquery.viewportchecker.js') }}"></script>
       <script src="{{ asset('assets/ytplayer/jquery.mb.ytplayer.min.js') }}"></script>
@@ -53,7 +53,7 @@
       <script src="{{ asset('assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js') }}"></script>
       <script src="{{ asset('assets/mbr-clients-slider/mbr-clients-slider.js') }}"></script>
       <script src="{{ asset('assets/smoothscroll/smooth-scroll.js') }}"></script>
-      <script src="{{ asset('assets/formoid/formoid.min.js') }}"></script>
+      <script src="{{ asset('assets/formoid/formoid.min.js') }}"></script>-->
       <script>
 
           $('#popular-internships .owl-carousel').owlCarousel({

@@ -8,7 +8,7 @@
 
 
 
-    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm" style="background-color:#fafafa;">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <div class="hamburger">
                 <span></span>
@@ -28,20 +28,42 @@
             </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
-                    <a class="nav-link link text-white display-4" href=""><span class="mbri-target mbr-iconfont mbr-iconfont-btn"></span>
-
-                        Students</a>
-                </li><li class="nav-item"><a class="nav-link link text-white display-4" href=""><span class="mbri-briefcase mbr-iconfont mbr-iconfont-btn"></span>
-                        Recruiters</a></li><li class="nav-item"><a class="nav-link link text-white display-4" href=""><span class="mbri-devices mbr-iconfont mbr-iconfont-btn"></span>
-                        Courses</a></li>
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
                 <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="">
-                        <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>Search &nbsp;</a>
-                </li></ul>
-            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="/student/register"><span class="mbrib-edit mbr-iconfont mbr-iconfont-btn"></span>
-                    REGISTER!
-                </a></div>
+                    <a class="nav-link link display-4" href=""><span class="mbri-target mbr-iconfont mbr-iconfont-btn"></span>Students</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link display-4" href=""><span class="mbri-briefcase mbr-iconfont mbr-iconfont-btn"></span>Recruiters</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link display-4" href=""><span class="mbri-devices mbr-iconfont mbr-iconfont-btn"></span>Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link display-4" href=""><span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>Search &nbsp;</a>
+                </li>
+            </ul>
+
+            <div class="dropdown show">
+              <a class="btn btn-primary dropdown-toggle display-4" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Login
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="/student/login">Student Login</a>
+                <a class="dropdown-item" href="/recruiter/login">Recruiter Login</a>
+              </div>
+            </div>
+
+            <div class="dropdown show">
+              <a class="btn btn-primary dropdown-toggle display-4" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Register
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="/student/register">Student Register</a>
+                <a class="dropdown-item" href="/recruiter/register">Recruiter Register</a>
+              </div>
+            </div>
         </div>
     </nav>
 </section>
@@ -52,30 +74,15 @@
 
     <div class="y" style="opacity: 0.3; background-color: rgb(35, 35, 35);"></div>
 
-    <div class="container align-center">
-        <div class="row justify-content-md-center">
-            <div class="mbr-white col-md-10">
-                <h3 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1" style="color: #fff;">&nbsp;Connecting Talents and Companies</h3>
-
-                <!--<p class="mbr-text pb-3 mbr-fonts-style display-5" style="color: #000;">Getting Internships made simple</p>-->
+    <div class="container">
+        <div class="row">
+            <div class="mbr-white col-md-10 mb-5">
+                <h3 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style" style="color: #fff;">Connecting Talents and Companies</h3>
                 <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" href="/search_internships">I NEED INTERNSHIPS</a>
-                    <a class="btn btn-md btn-white-outline display-4" href="/search_course">I NEED SKILLS</a></div>-->
-
-                <!--<a class="cta" href="search.html">
-                            <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5833 12.8333H13.6617L13.335 12.5183C14.4783 11.1883 15.1667 9.46167 15.1667 7.58333C15.1667 3.395 11.7717 0 7.58333 0C3.395 0 0 3.395 0 7.58333C0 11.7717 3.395 15.1667 7.58333 15.1667C9.46167 15.1667 11.1883 14.4783 12.5183 13.335L12.8333 13.6617V14.5833L18.6667 20.405L20.405 18.6667L14.5833 12.8333ZM7.58331 12.8333C4.67831 12.8333 2.33331 10.4883 2.33331 7.58331C2.33331 4.67831 4.67831 2.33331 7.58331 2.33331C10.4883 2.33331 12.8333 4.67831 12.8333 7.58331C12.8333 10.4883 10.4883 12.8333 7.58331 12.8333Z" transform="translate(3.5 4.26831)" fill="#868686"/>
-                                </svg>
-
-                        <h3>Search for Courses/Internships</h3>
-                </a>-->
+                    <a class="btn btn-md btn-white-outline display-4" href="/search_course">I NEED SKILLS</a></div>
             </div>
         </div>
     </div>
-    <!--<div class="mbr-arrow hidden-sm-down" aria-hidden="true">
-        <a href="#next">
-            <i class="mbri-down mbr-iconfont"></i>
-        </a>
-    </div>-->
 </section>
 
  <section class="features3 cid-qXwjcYsW1c" id="features3-x">
@@ -551,6 +558,4 @@
     </div>
 </section>
 
-
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.js"></script>
   @endsection
