@@ -79,6 +79,22 @@ Route::group(['prefix' => 'recruiter'], function () {
   Route::post('/login', 'RecruiterAuth\LoginController@login');
   Route::get('/logout', 'RecruiterAuth\LoginController@logout')->name('logout');
 
+
+  /*---Socialite Google login*/
+  Route::get('/google_recruiter_redirect', 'RecruiterAuth\LoginController@redirectToRecrGoogle');
+  Route::get('/g_callback', 'RecruiterAuth\LoginController@handleRecrGoogleCallback');
+  /*---Socialite Google login end---*/
+
+  /*---Socialite FB login*/
+  Route::get('/fb_recruiter_redirect', 'RecruiterAuth\LoginController@redirectToRecrFB');
+  Route::get('/fb_callback', 'RecruiterAuth\LoginController@handleRecrFBCallback');
+  /*---Socialite FB login end---*/
+
+  /*---Socialite LinkedIn login*/
+  Route::get('/linkedin_recruiter_redirect', 'RecruiterAuth\LoginController@redirectToRecrLinkedIn');
+  Route::get('/linkedin_callback', 'RecruiterAuth\LoginController@handleRecrFBCallback');
+  /*---Socialite LinkedIn login end---*/
+
   Route::get('/register', 'RecruiterAuth\RegisterController@showRegistrationForm')->name('register');
   Route::post('/register', 'RecruiterAuth\RegisterController@register');
 

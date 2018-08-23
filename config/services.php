@@ -40,17 +40,31 @@ return [
           'client_secret' => env('GOOGLE_CLIENT_SECRET'),
           'redirect'      => env('GOOGLE_REDIRECT')
       ],
-
+      /*'google_recruiter' => [
+            'client_id'     => env('GOOGLE_RECR_CLIENT_ID'),
+            'client_secret' => env('GOOGLE_RECR_CLIENT_SECRET'),
+            'redirect'      => env('GOOGLE_RECR_REDIRECT')
+        ],*/
     'facebook' => [
           'client_id' => env('FB_CLIENT_ID'),
           'client_secret' => env('FB_CLIENT_SECRET'),
           'redirect' =>  env('FB_REDIRECT')
       ],
-      
+      /*'facebook_recruiter' => [
+            'client_id' => env('FB_RECR_CLIENT_ID'),
+            'client_secret' => env('FB_RECR_CLIENT_SECRET'),
+            'redirect' =>  env('FB_RECR_REDIRECT')
+        ],*/
+
       'linkedin' => [
             'client_id' => env('LI_CLIENT_ID'),
             'client_secret' => env('LI_CLIENT_SECRET'),
             'redirect' =>  env('LI_REDIRECT')
         ],
+        /*'linkedin_recruiter' => [
+              'client_id' => env('LI_RECR_CLIENT_ID'),
+              'client_secret' => env('LI_RECR_CLIENT_SECRET'),
+              'redirect' =>  env('LI_RECR_REDIRECT')
+          ],*/
 
 ];

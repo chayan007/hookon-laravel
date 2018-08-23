@@ -7,6 +7,9 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 use Hesto\MultiAuth\Traits\LogsoutGuard;
 
+use Laravel\Socialite\Facades\Socialite;
+use App\Recruiter;
+
 class LoginController extends Controller
 {
     /*
@@ -19,6 +22,108 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
+    /*public function redirectToRecrGoogle()
+    {
+        return Socialite::driver('google_recruiter')->redirect();
+    }
+    public function redirectToRecrFB()
+    {
+        return Socialite::driver('facebook_recruiter')->redirect();
+    }
+    public function redirectToRecrLinkedIn()
+    {
+        return Socialite::driver('linkedin_recruiter')->redirect();
+    }
+    /**
+       * Obtain the user information from Google.
+       *
+       * @return \Illuminate\Http\Response
+       */
+    /*  public function handleRecrGoogleCallback()
+      {
+
+          $user = Socialite::driver('google_recruiter')->stateless()->user();
+
+          // check if they're an existing user
+          $existingUser = Recruiter::where('email', $user->email)->first();
+
+          if($existingUser){
+              // log them in
+              Auth::guard('recruiter')->login($existingUser, true);
+          } else {
+              // create a new user
+              $newUser = new Recruiter;
+              $newUser->name = $user->name;
+              $newUser->email = $user->email;
+              $newUser->password = "";
+              $newUser->api_id = $user->id;
+              $newUser->save();
+
+              Auth::guard('recruiter')->login($newUser, true);
+              //auth()->login($newUser, true);
+          }
+          return redirect()->to('/recruiter/profile');
+      }
+      /**
+         * Obtain the user information from Facebook.
+         *
+         * @return \Illuminate\Http\Response
+         */
+        /*public function handleRecrFBCallback()
+        {
+
+            $user = Socialite::driver('facebook_recruiter')->user();
+
+            // check if they're an existing user
+            $existingUser = Recruiter::where('email', $user->email)->first();
+
+            if($existingUser){
+                // log them in
+                Auth::guard('recruiter')->login($existingUser, true);
+            } else {
+                // create a new user
+                $newUser = new Recruiter;
+                $newUser->name = $user->name;
+                $newUser->email = $user->email;
+                $newUser->password = "";
+                $newUser->api_id = $user->id;
+                $newUser->save();
+
+                Auth::guard('recruiter')->login($newUser, true);
+                //auth()->login($newUser, true);
+            }
+            return redirect()->to('/recruiter/profile');
+        }
+        /**
+           * Obtain the user information from LinkedIn.
+           *
+           * @return \Illuminate\Http\Response
+           */
+          /*public function handleRecrLinkedInCallback()
+          {
+
+              $user = Socialite::driver('linkedin_recruiter')->user();
+
+              // check if they're an existing user
+              $existingUser = Recruiter::where('email', $user->email)->first();
+
+              if($existingUser){
+                  // log them in
+                  Auth::guard('recruiter')->login($existingUser, true);
+              } else {
+                  // create a new user
+                  $newUser = new Recruiter;
+                  $newUser->name = $user->name;
+                  $newUser->email = $user->email;
+                  $newUser->password = "";
+                  $newUser->api_id = $user->id;
+                  $newUser->save();
+
+                  Auth::guard('recruiter')->login($newUser, true);
+                  //auth()->login($newUser, true);
+              }
+              return redirect()->to('/recruiter/profile');
+          }
 
     use AuthenticatesUsers, LogsoutGuard {
         LogsoutGuard::logout insteadof AuthenticatesUsers;

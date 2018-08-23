@@ -16,7 +16,7 @@ class Recruiter extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','dob','phone','company','photo_url','privilege',
+        'name', 'email', 'password','dob','phone','company','photo_url','privilege','api_id',
     ];
 
     /**

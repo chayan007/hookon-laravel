@@ -8,7 +8,7 @@
 
 
 
-    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm" style="background-color:#fafafa;">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <div class="hamburger">
                 <span></span>
@@ -20,29 +20,50 @@
         <div class="menu-logo">
             <div class="navbar-brand">
                 <span class="navbar-logo">
-                    <a href="https://mobirise.com">
-                         <img src="assets/images/logo2.png" alt="Mobirise" style="height: 4.4rem;">
+                    <a href="#">
+                         <img src="{{ asset('assets/ExtraAssets/hookon.png') }}" alt="Hookon" style="height: 4.4rem;">
                     </a>
                 </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="https://mobirise.com">
-                        Hookon Internships</a></span>
+
             </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="https://mobirise.com"><span class="mbri-target mbr-iconfont mbr-iconfont-btn"></span>
-
-                        Students</a>
-                </li><li class="nav-item"><a class="nav-link link text-white display-4" href="https://mobirise.com"><span class="mbri-briefcase mbr-iconfont mbr-iconfont-btn"></span>
-                        Recruiters</a></li><li class="nav-item"><a class="nav-link link text-white display-4" href="https://mobirise.com"><span class="mbri-devices mbr-iconfont mbr-iconfont-btn"></span>
-                        Courses</a></li>
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
                 <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="https://mobirise.com">
-                        <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>Search &nbsp;</a>
-                </li></ul>
-            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="https://mobirise.com"><span class="mbrib-edit mbr-iconfont mbr-iconfont-btn"></span>
-                    REGISTER!
-                </a></div>
+                    <a class="nav-link link display-4" href=""><span class="mbri-target mbr-iconfont mbr-iconfont-btn"></span>Students</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link display-4" href=""><span class="mbri-briefcase mbr-iconfont mbr-iconfont-btn"></span>Recruiters</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link display-4" href=""><span class="mbri-devices mbr-iconfont mbr-iconfont-btn"></span>Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link display-4" href=""><span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>Search &nbsp;</a>
+                </li>
+            </ul>
+
+            <div class="dropdown show">
+              <a class="btn btn-primary dropdown-toggle display-4" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Login
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="/student/login">Student Login</a>
+                <a class="dropdown-item" href="/recruiter/login">Recruiter Login</a>
+              </div>
+            </div>
+
+            <div class="dropdown show">
+              <a class="btn btn-primary dropdown-toggle display-4" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Register
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="/student/register">Student Register</a>
+                <a class="dropdown-item" href="/recruiter/register">Recruiter Register</a>
+              </div>
+            </div>
         </div>
     </nav>
 </section>

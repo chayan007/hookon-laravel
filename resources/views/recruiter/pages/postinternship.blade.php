@@ -62,9 +62,11 @@
                 <div class="form-group">
                   <label for="">Location</label>
                   <select class="form-control" name="location" id="">
-                    <option>Virtual</option>
-                    <option>Kolkata</option>
-                    <option>Patna</option>
+
+                    @foreach($locations as $locations)
+                      <option>{{$locations->location_name}}</option>
+                   @endforeach
+                    
                   </select>
                   <small id="helpId" class="form-text text-muted">Just to let Interns know about it</small>
                 </div>
