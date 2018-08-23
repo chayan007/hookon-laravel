@@ -36,7 +36,7 @@ class RecruiterController extends Controller
 
       //To fix: File upload and file reflection in UI not working
       $img = $request->photo;
-      $img_path = $img->store('public/images/profile');
+      $img_path = $img->store('public/img/internship');
       $internship->logo_url = $img_path;
 
       $internship->email = $request->email;
@@ -70,7 +70,10 @@ class RecruiterController extends Controller
       $course->course = $request->course;
       $course->instructor = $request->instructor;
       //$internship->photo = $request->photo;
-
+            $file = $request->photo;
+            $path = $file->store('public/img/course');
+            $course->photo = $path;
+            $course->save();
       //To fix: File upload and file reflection in UI not working
 
       $course->url = $request->url;
