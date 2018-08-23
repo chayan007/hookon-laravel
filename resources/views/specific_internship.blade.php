@@ -10,10 +10,10 @@
     <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm" style="background-color:#fafafa;">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+              <span style="background:black;"></span>
+              <span style="background:black;"></span>
+              <span style="background:black;"></span>
+              <span style="background:black;"></span>
             </div>
         </button>
         <div class="menu-logo">
@@ -27,20 +27,20 @@
             </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                <li class="nav-item">
-                    <a class="nav-link link display-4" href=""><span class="mbri-target mbr-iconfont mbr-iconfont-btn"></span>Students</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link display-4" href=""><span class="mbri-briefcase mbr-iconfont mbr-iconfont-btn"></span>Recruiters</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link display-4" href=""><span class="mbri-devices mbr-iconfont mbr-iconfont-btn"></span>Courses</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link display-4" href=""><span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>Search &nbsp;</a>
-                </li>
-            </ul>
+          <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+              <li class="nav-item">
+                  <a class="link display-4" style="color:black;" href=""><span class="mbri-target mbr-iconfont mbr-iconfont-btn"></span>Students</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link display-4" style="color:black;" href=""><span class="mbri-briefcase mbr-iconfont mbr-iconfont-btn"></span>Recruiters</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link display-4" style="color:black;" href=""><span class="mbri-devices mbr-iconfont mbr-iconfont-btn"></span>Courses</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link link display-4" style="color:black;" href=""><span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>Search &nbsp;</a>
+              </li>
+          </ul>
 
             <div class="dropdown show">
               <a class="btn btn-primary dropdown-toggle display-4" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

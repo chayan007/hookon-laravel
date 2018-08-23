@@ -17,12 +17,12 @@ Route::get('/', function () {
 Route::get('/search_internships', 'RecruiterController@view_internship');
 Route::get('/search_course','RecruiterController@view_courses');
 
-/*Route::get('/specific_internship', function(){
+Route::get('/specific_internship', function(){
    return view('specific_internship');
 });
 Route::get('/specific_course', function(){
    return view('specific_course');
-});*/
+});
 
 Route::get('/search_skills', 'SearchController@search_skills');
 Route::get('/search_location', 'SearchController@search_location');
