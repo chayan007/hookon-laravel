@@ -89,14 +89,14 @@
                                <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label for="">Search by Skills</label>
-                                        <input type="text" class="form-control" name="" id="skills" aria-describedby="helpId" aria-label="Large" placeholder="I want courses for ....">
+                                        <input type="text" autocomplete="off" class="form-control" name="" id="skills" aria-describedby="helpId" aria-label="Large" placeholder="I want courses for ....">
                                         <small id="helpId" class="form-text text-muted">Enter the domain of your course</small>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label for="">Search by Location</label>
-                                        <input type="text" class="form-control" name="" id="location" aria-describedby="helpId" aria-label="Large" placeholder="I want courses at .....">
+                                        <input type="text" autocomplete="off" class="form-control" name="" id="location" aria-describedby="helpId" aria-label="Large" placeholder="I want courses at .....">
                                         <small id="helpId" class="form-text text-muted">Enter the location of course</small>
                                     </div>
                                 </div>
@@ -469,8 +469,9 @@ function autocomplete_skills(inp, arr) {
           /*insert a input field that will hold the current array item's value:*/
           b.style.position = "relative";
           b.style.zIndex = "1000";
-          b.style.backgroundColor = "#d95058";
+          b.style.backgroundColor = "#efefef";
           b.style.padding = "0.5rem";
+          b.style.cursor = "pointer";
           b.innerHTML += "<input type='hidden' value='" + arr[i]['category_name'] + "'>";
           /*execute a function when someone clicks on the item value (DIV element):*/
           b.addEventListener("click", function(e) {
@@ -579,8 +580,9 @@ function autocomplete_location(inp, arr) {
           /*insert a input field that will hold the current array item's value:*/
           b.style.position = "relative";
           b.style.zIndex = "1000";
-          b.style.backgroundColor = "#d95058";
+          b.style.backgroundColor = "#efefef";
           b.style.padding = "0.5rem";
+          b.style.cursor = "pointer";
           b.innerHTML += "<input type='hidden' value='" + arr[i]['location_name'] + "'>";
           /*execute a function when someone clicks on the item value (DIV element):*/
           b.addEventListener("click", function(e) {

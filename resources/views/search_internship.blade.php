@@ -559,7 +559,8 @@ function autocomplete_skills(inp, arr) {
           /*insert a input field that will hold the current array item's value:*/
           b.style.position = "relative";
           b.style.zIndex = "1000";
-          b.style.backgroundColor = "#d95058";
+          b.style.backgroundColor = "#efefef";
+          b.style.cursor = "pointer";
           b.style.padding = "0.5rem";
           b.innerHTML += "<input type='hidden' value='" + arr[i]['category_name'] + "'>";
           /*execute a function when someone clicks on the item value (DIV element):*/
@@ -669,8 +670,8 @@ function autocomplete_location(inp, arr) {
           /*insert a input field that will hold the current array item's value:*/
           b.style.position = "relative";
           b.style.zIndex = "1000";
-          b.style.backgroundColor = "#d95058";
-          b.style.padding = "0.5rem";
+          b.style.backgroundColor = "#efefef";
+          b.style.cursor = "pointer";          b.style.padding = "0.5rem";
           b.innerHTML += "<input type='hidden' value='" + arr[i]['location_name'] + "'>";
           /*execute a function when someone clicks on the item value (DIV element):*/
           b.addEventListener("click", function(e) {
