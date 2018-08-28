@@ -22,27 +22,27 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
-    /*public function redirectToRecrGoogle()
+    public function redirectToGoogle()
     {
-        return Socialite::driver('google_recruiter')->redirect();
+        return Socialite::driver('google')->redirect();
     }
-    public function redirectToRecrFB()
+    public function redirectToFB()
     {
-        return Socialite::driver('facebook_recruiter')->redirect();
+        return Socialite::driver('facebook')->redirect();
     }
-    public function redirectToRecrLinkedIn()
+    public function redirectToLinkedIn()
     {
-        return Socialite::driver('linkedin_recruiter')->redirect();
+        return Socialite::driver('linkedin')->redirect();
     }
     /**
        * Obtain the user information from Google.
        *
        * @return \Illuminate\Http\Response
        */
-    /*  public function handleRecrGoogleCallback()
+      public function handleGoogleCallback()
       {
 
-          $user = Socialite::driver('google_recruiter')->stateless()->user();
+          $user = Socialite::driver('google')->stateless()->user();
 
           // check if they're an existing user
           $existingUser = Recruiter::where('email', $user->email)->first();
@@ -69,10 +69,10 @@ class LoginController extends Controller
          *
          * @return \Illuminate\Http\Response
          */
-        /*public function handleRecrFBCallback()
+        public function handleFBCallback()
         {
 
-            $user = Socialite::driver('facebook_recruiter')->user();
+            $user = Socialite::driver('facebook')->user();
 
             // check if they're an existing user
             $existingUser = Recruiter::where('email', $user->email)->first();
@@ -99,10 +99,10 @@ class LoginController extends Controller
            *
            * @return \Illuminate\Http\Response
            */
-          /*public function handleRecrLinkedInCallback()
+          public function handleLinkedInCallback()
           {
 
-              $user = Socialite::driver('linkedin_recruiter')->user();
+              $user = Socialite::driver('linkedin')->user();
 
               // check if they're an existing user
               $existingUser = Recruiter::where('email', $user->email)->first();
