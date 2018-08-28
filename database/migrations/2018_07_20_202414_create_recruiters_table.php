@@ -22,7 +22,6 @@ class CreateRecruitersTable extends Migration
             $table->string('company');
             $table->string('photo_url');
             $table->string('privilege');
-            $table->string('api_id');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -123,7 +123,7 @@ class LoginController extends Controller
                   //auth()->login($newUser, true);
               }
               return redirect()->to('/recruiter/profile');
-          }
+          }*/
 
     use AuthenticatesUsers, LogsoutGuard {
         LogsoutGuard::logout insteadof AuthenticatesUsers;

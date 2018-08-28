@@ -11,10 +11,10 @@
     <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm" style="background-color:#fafafa;">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+              <span style="background:black;"></span>
+              <span style="background:black;"></span>
+              <span style="background:black;"></span>
+              <span style="background:black;"></span>
             </div>
         </button>
         <div class="menu-logo">
@@ -28,20 +28,20 @@
             </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                <li class="nav-item">
-                    <a class="nav-link link display-4" href=""><span class="mbri-target mbr-iconfont mbr-iconfont-btn"></span>Students</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link display-4" href=""><span class="mbri-briefcase mbr-iconfont mbr-iconfont-btn"></span>Recruiters</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link display-4" href=""><span class="mbri-devices mbr-iconfont mbr-iconfont-btn"></span>Courses</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link display-4" href=""><span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>Search &nbsp;</a>
-                </li>
-            </ul>
+          <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+              <li class="nav-item">
+                  <a class="link display-4" style="color:black;" href=""><span class="mbri-target mbr-iconfont mbr-iconfont-btn"></span>Students</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link display-4" style="color:black;" href=""><span class="mbri-briefcase mbr-iconfont mbr-iconfont-btn"></span>Recruiters</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link display-4" style="color:black;" href=""><span class="mbri-devices mbr-iconfont mbr-iconfont-btn"></span>Courses</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link link display-4" style="color:black;" href=""><span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>Search &nbsp;</a>
+              </li>
+          </ul>
 
             <div class="dropdown show">
               <a class="btn btn-primary dropdown-toggle display-4" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -90,15 +90,16 @@
                                <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label for="">Search by Skills</label>
-                                        <input type="text" class="form-control" name="" id="skills" aria-describedby="helpId" aria-label="Large" placeholder="I want Internships for ....">
-                                        <!--<div id="s_result" style="z-index:1000;background-color:white;">Soemthing</div>
-                                        --><small id="helpId" class="form-text text-muted">Enter the domain of Internship</small>
+                                        <input type="text" class="form-control" name="" id="skills" autocomplete="off" aria-describedby="helpId" aria-label="Large" placeholder="I want Internships for ....">
+                                        <!--<div id="s_result" style="z-index:1000;background-color:white;">Soemthing</div>-->
+                                        <div id="display"></div>
+                                        <small id="helpId" class="form-text text-muted">Enter the domain of Internship</small>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label for="">Search by Location</label>
-                                        <input type="text" class="form-control" name="" id="location" aria-describedby="helpId" aria-label="Large" placeholder="I want Internships at .....">
+                                        <input type="text" class="form-control" name="" id="location" autocomplete="off" aria-describedby="helpId" aria-label="Large" placeholder="I want Internships at .....">
                                         <small id="helpId" class="form-text text-muted">Enter the location of Internship</small>
                                     </div>
                                 </div>
@@ -442,7 +443,6 @@
         </div>
     </div>
 </section>
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.js"></script>
 <script type="text/javascript">
 $("#skills").on('keyup',function(){
       $value = $(this).val();
@@ -455,8 +455,18 @@ $("#skills").on('keyup',function(){
                   'val' : $value,
               },
               success:function(data){
-                autocomplete_skills(document.getElementById("skills"), data);
-                console.log(data['category_name']);
+                for(var i=0;i<data.length;i++){
+                  $("#display").html(data[i]['category_name']).show();
+                  //autocomp_skills(document.getElementById("skills"), data);
+                  /*for(var i=0;i<data.length;i++){
+                    $("#display").click( function(){
+                      inp.value = data[i]['category_name'];
+                    });
+                  }*/
+
+                  $("#display").html("<br/>")
+                }
+                console.log("skills is "+data);
               },
   });
 });
@@ -478,6 +488,45 @@ $("#location").on('keyup',function(){
   });
 });
 
+</script>
+<script>
+function autocomp_skills(inp,data){
+  inp.addEventListener("input", function(){
+     var outerDiv,innerDiv,i;
+
+     close();
+
+     if(inp!==null){
+        outerDiv = document.createElement("DIV");
+
+        outerDiv.setAttribute("class", "autocomplete-items");
+
+        this.parentNode.appendChild(outerDiv);
+
+        for(i=0;i<data.length;i++){
+          innerDiv = document.createElement("DIV");
+          innerDiv.innerHTML = "<strong>"+data[i]['category_name']+"</strong>"
+          innerDiv.addEventListener("click", function(i){
+            inp.value = data[0]['category_name'];
+            close();
+          });
+          outerDiv.appendChild(innerDiv);
+        }
+
+     }
+  });
+}
+
+function close(elmnt) {
+  /*close all autocomplete lists in the document,
+  except the one passed as an argument:*/
+  var x = document.getElementsByClassName("autocomplete-items");
+  for (var i = 0; i < x.length; i++) {
+    if (elmnt != x[i] && elmnt != inp) {
+      x[i].parentNode.removeChild(x[i]);
+    }
+  }
+}
 </script>
 <script>
 // Auto complete function starts
@@ -510,7 +559,8 @@ function autocomplete_skills(inp, arr) {
           /*insert a input field that will hold the current array item's value:*/
           b.style.position = "relative";
           b.style.zIndex = "1000";
-          b.style.backgroundColor = "#d95058";
+          b.style.backgroundColor = "#efefef";
+          b.style.cursor = "pointer";
           b.style.padding = "0.5rem";
           b.innerHTML += "<input type='hidden' value='" + arr[i]['category_name'] + "'>";
           /*execute a function when someone clicks on the item value (DIV element):*/
@@ -620,8 +670,8 @@ function autocomplete_location(inp, arr) {
           /*insert a input field that will hold the current array item's value:*/
           b.style.position = "relative";
           b.style.zIndex = "1000";
-          b.style.backgroundColor = "#d95058";
-          b.style.padding = "0.5rem";
+          b.style.backgroundColor = "#efefef";
+          b.style.cursor = "pointer";          b.style.padding = "0.5rem";
           b.innerHTML += "<input type='hidden' value='" + arr[i]['location_name'] + "'>";
           /*execute a function when someone clicks on the item value (DIV element):*/
           b.addEventListener("click", function(e) {
