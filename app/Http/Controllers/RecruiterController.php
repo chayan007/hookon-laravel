@@ -11,14 +11,6 @@ use DB;
 
 class RecruiterController extends Controller
 {
-  public function view_internship(Request $request){
-      $view_internship = Internship::all();
-      return view('search_internship')->with('view_internship', $view_internship);
-  }
-  public function view_courses(Request $request){
-      $view_course = Course::all();
-      return view('search_course')->with('view_course', $view_course);
-  }
   public function view_post_internship(Request $request){
       $locations = Location::all();
       return view('recruiter.pages.postinternship')->with('locations', $locations);

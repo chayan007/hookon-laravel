@@ -14,8 +14,8 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/search_internships', 'RecruiterController@view_internship');
-Route::get('/search_course','RecruiterController@view_courses');
+Route::get('/search_internships', 'PublicController@view_internship');
+Route::get('/search_course','PublicController@view_courses');
 
 Route::get('/specific_internship', function(){
    return view('specific_internship');
@@ -81,18 +81,18 @@ Route::group(['prefix' => 'recruiter'], function () {
 
 
   /*---Socialite Google login*/
-  Route::get('/google_recruiter_redirect', 'RecruiterAuth\LoginController@redirectToRecrGoogle');
-  Route::get('/g_callback', 'RecruiterAuth\LoginController@handleRecrGoogleCallback');
+  Route::get('/google_recruiter_redirect', 'RecruiterAuth\LoginController@redirectToGoogle');
+  Route::get('/g_callback', 'RecruiterAuth\LoginController@handleGoogleCallback');
   /*---Socialite Google login end---*/
 
   /*---Socialite FB login*/
-  Route::get('/fb_recruiter_redirect', 'RecruiterAuth\LoginController@redirectToRecrFB');
-  Route::get('/fb_callback', 'RecruiterAuth\LoginController@handleRecrFBCallback');
+  Route::get('/fb_recruiter_redirect', 'RecruiterAuth\LoginController@redirectTorFB');
+  Route::get('/fb_callback', 'RecruiterAuth\LoginController@handleFBCallback');
   /*---Socialite FB login end---*/
 
   /*---Socialite LinkedIn login*/
-  Route::get('/linkedin_recruiter_redirect', 'RecruiterAuth\LoginController@redirectToRecrLinkedIn');
-  Route::get('/linkedin_callback', 'RecruiterAuth\LoginController@handleRecrFBCallback');
+  Route::get('/linkedin_recruiter_redirect', 'RecruiterAuth\LoginController@redirectToLinkedIn');
+  Route::get('/linkedin_callback', 'RecruiterAuth\LoginController@handleFBCallback');
   /*---Socialite LinkedIn login end---*/
 
   Route::get('/register', 'RecruiterAuth\RegisterController@showRegistrationForm')->name('register');
