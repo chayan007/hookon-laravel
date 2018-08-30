@@ -7,7 +7,7 @@ Route::get('/home', function () {
 
     //dd($users);
 
-    return view('recruiter.home');
+    return view('recruiter.pages.profile');
 })->name('home');
 Route::get('/profile', function () {
     return view('recruiter.pages.profile');

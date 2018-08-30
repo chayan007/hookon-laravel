@@ -7,7 +7,7 @@ Route::get('/home', function () {
 
     //dd($users);
 
-    return view('student.home');
+    return view('student.pages.profile');
 })->name('home');
 Route::get('/profile',function(){
     return view('student.pages.profile');
