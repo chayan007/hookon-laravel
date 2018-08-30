@@ -61,16 +61,23 @@ class AdminController extends Controller
         $category->delete();
         return redirect('/admin/category')->with('status', 'Category is Deleted !');
     }
+    public function viewLocation()
+    {
+        $locations = Location::all();
+        return view('admin.pages.location', ['locations' => $locations]);
+    }
     public function addLocation(Request $request)
     {
         $location = new Location;
         $location->location_name = $request->location_name;
         $location->save();
+        return redirect('/admin/location')->with('status', 'Location is Added !');
     }
     public function deleteLocation($id)
     {
         $location = Location::where('id', $id)->firstOrFail();
         $location->delete();
+        return redirect('/admin/location')->with('status', 'Location is Deleted !');
     }
     public function viewInternship()
     {

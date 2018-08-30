@@ -22,3 +22,5 @@ Route::get('/cstatus', 'AdminController@viewCourseStatus')->name('courses status
 Route::get('/settings', 'AdminController@editAdmin')->name('settings');
 Route::post('/category','AdminController@addCategory');
 Route::get('/category', 'AdminController@viewCategory')->name('category');
+Route::post('/location','AdminController@addLocation');
+Route::get('/location','AdminController@viewLocation')->name('location');
