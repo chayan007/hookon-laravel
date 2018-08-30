@@ -8,6 +8,7 @@ use App\Internship;
 use App\Course;
 use App\Location;
 use App\Category;
+use App\Recruiter;
 use DB;
 
 class RecruiterController extends Controller
@@ -100,5 +101,49 @@ class RecruiterController extends Controller
       $internships= Internship::where('user_id',Auth::user()->id);
       dd($internships);
 
+  }
+  public function predict()
+  {
+
+      return view('recruiter.pages.edit');
+  }
+  public function edit1(Request $request)
+  {
+      //$student= App\Student::where('id',1)->firstOrFail();
+      try{
+        $recruiter= Recruiter::where('id',Auth::user()->id)->firstOrFail();
+      }catch(Exception $e){
+        redirect('/recruiter/profile');
+      }
+      if($request->name != null){
+           $recruiter->name=$request->name;
+           $recruiter->save();
+      }
+      if ($request->dob != null) {
+          $recruiter->dob = $request->dob;
+          $recruiter->save();
+      }
+      if ($request->email != null) {
+          $recruiter->email = $request->email;
+          $recruiter->save();
+      }
+      if ($request->phone != null) {
+          $recruiter->phone = $request->phone;
+          $recruiter->save();
+      }
+      if ($request->company != null) {
+          $recruiter->company = $request->company;
+          $recruiter->save();
+      }
+      if ($request->hasFile('photo')) {
+          $file = $request->photo;
+          $path = $file->store('public/images/profile');
+          $recruiter->photo_url = $path;
+          $recruiter->save();
+      }
+
+      $recruiter->save();
+      //dd($student);
+      return redirect('/recruiter/profile');
   }
 }

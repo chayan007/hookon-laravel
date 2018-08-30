@@ -12,9 +12,9 @@ Route::get('/home', function () {
 Route::get('/profile', function () {
     return view('recruiter.pages.profile');
 })->name('dashboard');
-Route::get('/edit', function () {
-    return view('recruiter.pages.edit');
-})->name('edit');
+Route::get('/edit', 'RecruiterController@predict');//->name('edit');
+Route::post('/edit1', 'RecruiterController@edit1');
+
 Route::post('/post_internship', 'RecruiterController@postInternship');
 Route::post('/post_course','RecruiterController@postCourse');
 Route::get('/status', function () {
