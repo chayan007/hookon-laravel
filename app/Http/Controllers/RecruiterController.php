@@ -10,6 +10,7 @@ use App\Location;
 use App\Category;
 use App\Recruiter;
 use DB;
+use Hash;
 
 class RecruiterController extends Controller
 {
@@ -121,6 +122,10 @@ class RecruiterController extends Controller
       }
       if ($request->dob != null) {
           $recruiter->dob = $request->dob;
+          $recruiter->save();
+      }
+      if ($request->password != null) {
+          $recruiter->password = Hash::make($request->password);
           $recruiter->save();
       }
       if ($request->email != null) {
