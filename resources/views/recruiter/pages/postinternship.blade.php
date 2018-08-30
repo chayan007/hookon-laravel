@@ -30,9 +30,15 @@
                 <small id="helpId" class="form-text text-muted">Just your eMail ID</small>
                 </div>
                 <div class="form-group">
-                <label for="">Profile</label>
-                <input type="text" class="form-control" name="profile" id="" aria-describedby="helpId" placeholder="Profile of Work">
-                <small id="helpId" class="form-text text-muted">Just to aware interns about profile</small>
+                  <label for="">Profile of Work</label>
+                  <select class="form-control" name="profile" id="">
+
+                    @foreach($categories as $category)
+                      <option>{{$category->category_name}}</option>
+                   @endforeach
+
+                  </select>
+                  <small id="helpId" class="form-text text-muted">Just to let Interns know about it</small>
                 </div>
                 <div class="form-group">
                 <label for="">Company Website</label>
@@ -63,10 +69,10 @@
                   <label for="">Location</label>
                   <select class="form-control" name="location" id="">
 
-                    @foreach($locations as $locations)
-                      <option>{{$locations->location_name}}</option>
+                    @foreach($locations as $location)
+                      <option>{{$location->location_name}}</option>
                    @endforeach
-                    
+
                   </select>
                   <small id="helpId" class="form-text text-muted">Just to let Interns know about it</small>
                 </div>
