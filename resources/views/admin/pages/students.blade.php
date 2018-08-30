@@ -59,16 +59,16 @@
                                   <div class="container-fluid">
                                       Add rows here
                                   </div>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary">Save</button>
+                                  <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                      <button type="submit" class="btn btn-primary">Save</button>
+                                  </div>
+                                </form>
                               </div>
                           </div>
                       </div>
-                  </div>
-
-                  <script>
+                              </div>
+                               <script>
                       $('#exampleModal').on('show.bs.modal', event => {
                           var button = $(event.relatedTarget);
                           var modal = $(this);
@@ -77,7 +77,9 @@
                       });
                   </script>
                 </tr>
-                          @endforeach
+                    @endforeach
+
+
                 </tbody>
                 <tfoot>
                <tr>

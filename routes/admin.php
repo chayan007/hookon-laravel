@@ -4,9 +4,6 @@ Route::get('/home', function () {
     $users[] = Auth::user();
     $users[] = Auth::guard()->user();
     $users[] = Auth::guard('admin')->user();
-
-    //dd($users);
-
     return view('admin.pages.profile');
 })->name('home');
 
@@ -24,3 +21,4 @@ Route::post('/category','AdminController@addCategory');
 Route::get('/category', 'AdminController@viewCategory')->name('category');
 Route::post('/location','AdminController@addLocation');
 Route::get('/location','AdminController@viewLocation')->name('location');
+

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Internship;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -17,7 +17,7 @@ class PublicController extends Controller
         $view_course = Course::all();
         return view('search_course')->with('view_course', $view_course);
     }
-    public function sort_internships()
+    public function sort_internships(Request $request)
     {
         if($request==NULL)
         {
