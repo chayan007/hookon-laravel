@@ -17,16 +17,13 @@
                 <thead>
                 <tr>
                   <th>Serial No.</th>
-                  <th>Company</th>
-                  <th>Profile</th>
+                  <th>Course</th>
+                  <th>Name</th>
                   <th>EMail</th>
-                  <th>Logo</th>
-                  <th>URL</th>
                   <th>Phone</th>
+                  <th>Virtual</th>
+                  <th>Comment</th>
                   <th>Location</th>
-                  <th>Stipend</th>
-                  <th>Edit</th>
-                  <th>Delete</th>
                 </tr>
                 </thead>
                 <tbody id="dataset">
@@ -39,59 +36,18 @@
                   <td>satyam.info</td>
                   <td>9477446558</td>
                   <td>Kolkata</td>
-                  <td>12000</td>
-                  <td>
-                  <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modelId">
-                    Edit
-                  </button></td>
-                  <td> <button type="button" class="btn btn-danger">Delete</button> </td>
-                  <!-- Modal -->
-                  <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                                  <h4 class="modal-title" id="modelTitleId">Modal title</h4>
-                              </div>
-                              <div class="modal-body">
-                                  <div class="container-fluid">
-                                      Add rows here
-                                  </div>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary">Save</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <script>
-                      $('#exampleModal').on('show.bs.modal', event => {
-                          var button = $(event.relatedTarget);
-                          var modal = $(this);
-                          // Use above variables to manipulate the DOM
-
-                      });
-                  </script>
                 </tr>
                 </tbody>
                 <tfoot>
                <tr>
                   <th>Serial No.</th>
-                  <th>Company</th>
-                  <th>Profile</th>
+                  <th>Course</th>
+                  <th>Name</th>
                   <th>EMail</th>
-                  <th>Logo</th>
-                  <th>URL</th>
                   <th>Phone</th>
+                  <th>Virtual</th>
+                  <th>Comment</th>
                   <th>Location</th>
-                  <th>Stipend</th>
-                  <th>Edit</th>
-                  <th>Delete</th>
                 </tr>
                 </tfoot>
               </table>

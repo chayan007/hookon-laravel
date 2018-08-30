@@ -7,13 +7,15 @@ use Illuminate\Support\Facades\Auth;
 use App\Internship;
 use App\Course;
 use App\Location;
+use App\Category;
 use DB;
 
 class RecruiterController extends Controller
 {
   public function view_post_internship(Request $request){
       $locations = Location::all();
-      return view('recruiter.pages.postinternship')->with('locations', $locations);
+      $categories = Category::all();
+      return view('recruiter.pages.postinternship',['locations' => $locations, 'categories' => $categories]);
   }
   public function view_post_course(Request $request){
       $locations = Location::all();
@@ -85,11 +87,18 @@ class RecruiterController extends Controller
       $course->syllabus = $request->syllabus;
 
       //Check these-
+      $course->user_id = Auth::user()->id;
       $course->category_id = $cat_id;
       $course->location_id = $loc_id;
 
       $course->save();
       //dd($student);
       return redirect('/recruiter/profile');
+  }
+  public function editInternship()
+  {
+      $internships= Internship::where('user_id',Auth::user()->id);
+      dd($internships);
+
   }
 }
