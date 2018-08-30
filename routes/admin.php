@@ -13,9 +13,11 @@ Route::get('/home', function () {
 Route::get('/admin', function () {
     return view('admin.pages.profile');
 })->name('dashboard');
-Route::get('/students', function () {
+Route::get('/students', 'AdminAuth\UtilityController@view_students');
+Route::post('/editStudent' , 'AdminAuth\UtilityController@update_students'); /*function () {
     return view('admin.pages.students');
-})->name('students');
+
+})->name('students');*/
 Route::get('/recruiters', function () {
     return view('admin.pages.recruiters');
 })->name('recruiters');

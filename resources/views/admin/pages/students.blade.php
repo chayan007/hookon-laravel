@@ -29,53 +29,94 @@
                 </tr>
                 </thead>
                 <tbody id="dataset">
-                <tr>
-                  <td>1</td>
-                  <td>Chayan</td>
-                  <td>sonicxxx7@gmail.com</td>
-                  <td>9477446558</td>
-                  <td>26.10.1997</td>
-                  <td>Web Dev & Ethical Hacker</td>
-                  <td><img src="{{ asset('img/logo.png') }}" height="30px" width="40px"></img></td>
-                  <td><a href="#">Click Here</a></td>
-                  <td>
-                  <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modelId">
-                    Edit
-                  </button></td>
-                  <td> <button type="button" class="btn btn-danger">Delete</button> </td>
-                  <!-- Modal -->
-                  <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                                  <h4 class="modal-title" id="modelTitleId">Modal title</h4>
-                              </div>
-                              <div class="modal-body">
-                                  <div class="container-fluid">
-                                      Add rows here
+
+
+                    <tr>
+                      <td>1</td>
+                      <td>Chayan</td>
+                      <td>sonicxxx7@gmail.com</td>
+                      <td>9477446558</td>
+                      <td>26.10.1997</td>
+                      <td>Web Dev & Ethical Hacker</td>
+                      <td><img src="{{ asset('img/logo.png') }}" height="30px" width="40px"></img></td>
+                      <td><a href="#">Click Here</a></td>
+                      <td>
+                      <!-- Button trigger modal -->
+                          <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modelId">
+                        Edit
+                      </button></td>
+                      <td> <button type="button" class="btn btn-danger">Delete</button> </td>
+                    </tr>
+
+
+                  @foreach($students as $students)
+                      <tr>
+                        <td>{{$students->id}}</td>
+                        <td>{{$students->name}}</td>
+                        <td>{{$students->email}}</td>
+                        <td>{{$students->phone}}</td>
+                        <td>{{$students->dob}}</td>
+                        <td>{{$students->skills}}</td>
+                        <td><img src="{{ asset('img/logo.png') }}" height="30px" width="40px"></img></td>
+                        <td><a href="#">Click Here</a></td>
+                        <td>
+                        <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modelId">
+                          Edit
+                        </button></td>
+                        <td> <button type="button" class="btn btn-danger">Delete</button> </td>
+                      </tr>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                                      <h4 class="modal-title" id="modelTitleId">Edit {{$students->name}}'s profile</h4>
+                                </div>
+                                  <div class="modal-body">
+                                      <div class="container-fluid">
+
+                                        <form method="POST" action="/admin/editStudent" enctype="multipart/form-data">
+                                              @csrf
+                                              <div class="form-group">
+                                                  <label for="">Student Name:</label>
+                                                  <input type="text" class="form-control" value="{{$students->name}}" name="name" id="" aria-describedby="helpId" placeholder="Enter Student name or keep it as it is.">
+                                              </div>
+                                              <div class="form-group">
+                                                  <label for="">Student Email:</label>
+                                                  <input type="text" class="form-control" value="{{$students->email}}" name="email" id="" aria-describedby="helpId" placeholder="Enter Student email or keep it as it is.">
+                                              </div>
+                                              <div class="form-group">
+                                                  <label for="">Student Phone:</label>
+                                                  <input type="text" class="form-control" name="phone" value="{{$students->phone}}" id="" aria-describedby="helpId" placeholder="Enter Student phone or keep it as it is.">
+                                              </div>
+                                              <div class="form-group">
+                                                  <label for="">Student Date of Birth:</label>
+                                                  <input type="text" class="form-control" name="dob" id="" value="{{$students->dob}}" aria-describedby="helpId" placeholder="Enter Student d.o.b or keep it as it is.">
+                                              </div>
+                                              <div class="form-group">
+                                                  <label for="">Student Skills:</label>
+                                                  <textarea class="form-control" name="skills" id="" rows="5">{{$students->skills}}</textarea>
+                                              </div>
+
+                                      </div>
                                   </div>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary">Save</button>
+                                  <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                      <button type="submit" class="btn btn-primary">Save</button>
+                                  </div>
+                                </form>
                               </div>
                           </div>
                       </div>
-                  </div>
 
-                  <script>
-                      $('#exampleModal').on('show.bs.modal', event => {
-                          var button = $(event.relatedTarget);
-                          var modal = $(this);
-                          // Use above variables to manipulate the DOM
+                    @endforeach
 
-                      });
-                  </script>
-                </tr>
+
                 </tbody>
                 <tfoot>
                <tr>
