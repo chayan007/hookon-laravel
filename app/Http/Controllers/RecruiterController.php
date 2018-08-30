@@ -53,6 +53,7 @@ class RecruiterController extends Controller
       $internship->stipend = $request->stipend;
 
       //Check these-
+      $internship->user_id = $request->user_id;
       $internship->category_id = $cat_id;
       $internship->location_id = $loc_id;
 
@@ -88,7 +89,7 @@ class RecruiterController extends Controller
       $course->syllabus = $request->syllabus;
 
       //Check these-
-      $course->user_id = Auth::user()->id;
+      $course->user_id = $request->user_id;
       $course->category_id = $cat_id;
       $course->location_id = $loc_id;
 
@@ -96,24 +97,33 @@ class RecruiterController extends Controller
       //dd($student);
       return redirect('/recruiter/profile');
   }
+  public function viewInternship()
+  {
+      $locations = Location::all();
+      $categories = Category::all();
+      $internships= Internship::where('user_id',Auth::user()->id)->get();
+      return view('recruiter.pages.editinternship',[
+          'internships' => $internships,
+          'categories' => $categories,
+          'locations' => $locations,
+      ]);
+
+  }
   public function editInternship()
   {
-      $internships= Internship::where('user_id',Auth::user()->id);
-      dd($internships);
-
+    //Write appropriate logic
   }
   public function predict()
   {
-
       return view('recruiter.pages.edit');
   }
-  public function edit1(Request $request)
+  public function edit1(Request $request, $id)
   {
       //$student= App\Student::where('id',1)->firstOrFail();
       try{
         $recruiter= Recruiter::where('id',Auth::user()->id)->firstOrFail();
       }catch(Exception $e){
-        redirect('/recruiter/profile');
+        return redirect('/recruiter/profile')->with('error','Record Not Found');
       }
       if($request->name != null){
            $recruiter->name=$request->name;

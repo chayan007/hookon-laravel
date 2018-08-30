@@ -14,6 +14,8 @@
         <div class="box-body">
           <form method="POST" action="/recruiter/post_internship" enctype="multipart/form-data">
                 @csrf
+                    <input type="hidden" class="form-control" name="user_id" id="inputName" value="{{Auth::user()->id}}">
+                </div>
                 <div class="form-group">
                 <label for="">Company Name</label>
                 <input type="text" class="form-control" name="company" id="" aria-describedby="helpId" placeholder="Enter Company">
