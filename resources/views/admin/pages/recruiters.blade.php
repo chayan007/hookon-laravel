@@ -23,27 +23,30 @@
                   <th>DOB</th>
                   <th>Company</th>
                   <th>Photo</th>
+                  <th>Plan</th>
                   <th>Edit</th>
                   <th>Delete</th>
                 </tr>
                 </thead>
                 <tbody id="dataset">
+                    @foreach ($recruiters as $recruiter)
                 <tr>
-                  <td>1</td>
-                  <td>Chayan</td>
-                  <td>sonicxxx7@gmail.com</td>
-                  <td>9477446558</td>
-                  <td>26.10.1997</td>
-                  <td>Web Dev & Ethical Hacker</td>
+                  <td>{{ $recruiter->id }}</td>
+                  <td>{{ $recruiter->name }}</td>
+                  <td>{{ $recruiter->email }}</td>
+                  <td>{{ $recruiter->phone }}</td>
+                  <td>{{ $recruiter->dob }}</td>
+                  <td>{{ $recruiter->company }}</td>
+                  <td>{{ $recruiter->privilege }}</td>
                   <td><img src="{{ asset('img/logo.png') }}" height="30px" width="40px"></img></td>
                   <td>
                   <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modelId">
+                      <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modelId{{ $recruiter->id }}">
                     Edit
                   </button></td>
-                  <td> <button type="button" class="btn btn-danger">Delete</button> </td>
+                  <td> <a href="recruiter/delete/{{ $recruiter->id }}"><button type="button" class="btn btn-danger">Delete</button></a> </td>
                   <!-- Modal -->
-                  <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                  <div class="modal fade" id="modelId{{ $recruiter->id }}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                           <div class="modal-content">
                               <div class="modal-header">
@@ -74,6 +77,7 @@
                       });
                   </script>
                 </tr>
+                @endforeach
                 </tbody>
                 <tfoot>
                <tr>
@@ -84,6 +88,7 @@
                   <th>DOB</th>
                   <th>Skills</th>
                   <th>Photo</th>
+                  <th>Plan</th>
                   <th>Edit</th>
                   <th>Delete</th>
                 </tr>

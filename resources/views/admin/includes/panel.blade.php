@@ -41,11 +41,21 @@
         @else
         ''
         @endif><a href="/admin/students"><i class="fa fa-users"></i> <span>Students</span></a></li>
-         <li class=@if ( strcasecmp(substr(strrchr(url()->current(),"/"),1),'recruiter')==0)
+         <li class=@if ( strcasecmp(substr(strrchr(url()->current(),"/"),1),'recruiters')==0)
         'active'
         @else
         ''
         @endif><a href="/admin/recruiters"><i class="fa fa-vcard-o"></i> <span>Recruiters</span></a></li>
+        <li class=@if ( strcasecmp(substr(strrchr(url()->current(),"/"),1),'category')==0)
+        'active'
+        @else
+        ''
+        @endif><a href="/admin/category"><i class="fa fa-superpowers"></i> <span>Categories</span></a></li>
+        <li class=@if ( strcasecmp(substr(strrchr(url()->current(),"/"),1),'location')==0)
+        'active'
+        @else
+        ''
+        @endif><a href="/admin/location"><i class="fa fa-podcast"></i> <span>Locations</span></a></li>
         <li class=@if ( strcasecmp(substr(strrchr(url()->current(),"/"),1),'edit')==0)
         'active'
         @else

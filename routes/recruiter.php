@@ -7,7 +7,7 @@ Route::get('/home', function () {
 
     //dd($users);
 
-    return view('recruiter.home');
+    return view('recruiter.pages.profile');
 })->name('home');
 Route::get('/profile', function () {
     return view('recruiter.pages.profile');
@@ -25,9 +25,7 @@ Route::get('/support', function () {
 })->name('support');
 Route::post('/edit', 'StudentController@support');
 Route::get('/postinternship', 'RecruiterController@view_post_internship');
-Route::get('/editinternship', function () {
-    return view('recruiter.pages.editinternship');
-});
+Route::get('/editinternship','RecruiterController@editInternship');
 Route::get('/editcourse', function () {
     return view('recruiter.pages.editcourse');
 });
