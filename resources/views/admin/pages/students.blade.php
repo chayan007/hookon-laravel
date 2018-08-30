@@ -44,7 +44,7 @@
                       <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modelId{{$student->id}}">
                     Edit
                   </button></td>
-                  <td> <a href="/student/delete/{{$student->id}}"<button type="button" class="btn btn-danger">Delete</button> </td>
+                  <td> <a href="/student/delete/{{$student->id}}"<button type="button" class="btn btn-danger">Delete</button></a> </td>
                   <!-- Modal -->
                   <div class="modal fade" id="modelId{{$student->id}}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                       <div class="modal-dialog" role="document">

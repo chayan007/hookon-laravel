@@ -5,13 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Student;
 use App\Internship;
+use App\Recruiter;
+use App\Location;
+use App\Intern;
+use App\Course;
+use App\Category;
 
 class AdminController extends Controller
 {
     public function viewStudent()
     {
         $students= Student::all();
-        return view('admin.pages.student',['student' => $students]);
+        return view('admin.pages.students',['students' => $students]);
     }
     public function deleteStudent($id)
     {
@@ -38,16 +43,23 @@ class AdminController extends Controller
     {
         //Write the proper logic
     }
+    public function viewCategory()
+    {
+        $categories = Category::all();
+        return view('admin.pages.category',['categories' => $categories]);
+    }
     public function addCategory(Request $request)
     {
         $category = new Category;
         $category->category_name= $request->category_name;
         $category->save();
+        return redirect('/admin/category')->with('status','Category is added !');
     }
     public function deleteCategory($id)
     {
         $category= Category::where('id',$id)->firstOrFail();
         $category->delete();
+        return redirect('/admin/category')->with('status', 'Category is Deleted !');
     }
     public function addLocation(Request $request)
     {
@@ -73,7 +85,7 @@ class AdminController extends Controller
     {
         $internship = Internship::where('id',$id)->firstOrFail();
         $internship->delete();
-        return view('admin.pages.profile')->with('status','Internship has been deleted successfully !');
+        return redirect('admin.pages.profile')->with('status','Internship has been deleted successfully !');
     }
     public function viewCourse()
     {
@@ -88,7 +100,7 @@ class AdminController extends Controller
     {
         $course = Course::where('id',$id)->firstOrFail();
         $course->delete();
-        return view('admin.pages.profile')->with('status', 'Course has been deleted successfully !');
+        return redirect('admin.pages.profile')->with('status', 'Course has been deleted successfully !');
     }
     public function viewInternshipStatus()
     {

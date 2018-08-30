@@ -26,6 +26,9 @@ Route::get('/specific_course', function(){
 
 Route::get('/search_skills', 'SearchController@search_skills');
 Route::get('/search_location', 'SearchController@search_location');
+Route::get('/recruiter/delete/{id}','AdminController@deleteRecruiter');
+Route::get('/student/delete/{id}', 'AdminController@deleteStudent');
+Route::get('/category/delete/{id}','AdminController@deleteCategory');
 
 Route::group(['prefix' => 'admin'], function () {
   Route::get('/login', 'AdminAuth\LoginController@showLoginForm')->name('login');
