@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Student;
+use Hash;
 
 class StudentController extends Controller
 {
@@ -24,6 +25,10 @@ class StudentController extends Controller
         if($request->name != null){
              $student->name=$request->name;
              $student->save();
+        }
+        if ($student->password != null) {
+            $student->password = Hash::make($request->password);
+            $student->save();
         }
         if ($request->dob != null) {
             $student->dob = $request->dob;
