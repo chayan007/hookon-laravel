@@ -29,23 +29,24 @@
                 </tr>
                 </thead>
                 <tbody id="dataset">
+                    @foreach ($students as $student)
                 <tr>
-                  <td>1</td>
-                  <td>Chayan</td>
-                  <td>sonicxxx7@gmail.com</td>
-                  <td>9477446558</td>
-                  <td>26.10.1997</td>
-                  <td>Web Dev & Ethical Hacker</td>
-                  <td><img src="{{ asset('img/logo.png') }}" height="30px" width="40px"></img></td>
-                  <td><a href="#">Click Here</a></td>
+                  <td>{{$student->id}}</td>
+                  <td>{{$student->name}}</td>
+                  <td>{{$student->email}}</td>
+                  <td>{{$student->phone}}</td>
+                  <td>{{$student->dob}}</td>
+                  <td>{{$student->skills}}</td>
+                  <td><img src="{{ $student->image_url }}" height="30px" width="40px"></img></td>
+                  <td><a href="{{$student->cv_url}}">Click Here</a></td>
                   <td>
                   <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modelId">
+                      <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modelId{{$student->id}}">
                     Edit
                   </button></td>
-                  <td> <button type="button" class="btn btn-danger">Delete</button> </td>
+                  <td> <a href="/student/delete/{{$student->id}}"<button type="button" class="btn btn-danger">Delete</button> </td>
                   <!-- Modal -->
-                  <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                  <div class="modal fade" id="modelId{{$student->id}}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                           <div class="modal-content">
                               <div class="modal-header">
@@ -76,6 +77,7 @@
                       });
                   </script>
                 </tr>
+                          @endforeach
                 </tbody>
                 <tfoot>
                <tr>
