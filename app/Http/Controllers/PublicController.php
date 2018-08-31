@@ -43,4 +43,14 @@ class PublicController extends Controller
         }
 
     }
+    public function view_specific_internship($id)
+    {
+        $internship = Internship::where('id',$id)->firstOrFail();
+        return view('specific_internship',['internship' => $internship]);
+    }
+    public function view_specific_course($id)
+    {
+        $course = Course::where('id', $id)->firstOrFail();
+        return view('specific_course', ['course' => $course]);
+    }
 }

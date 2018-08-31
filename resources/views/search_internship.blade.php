@@ -152,10 +152,10 @@
                  </p>
                  <div class="buttonlist col-md-12 col-12 pt-4" >
                     <div class="row">
-                         <a class="btn btn-primary ml-0 mr-2" style="width: 50%;" href="#" role="button">
+                         <a class="btn btn-primary ml-0 mr-2" style="width: 50%;" href="/internship/{{$view_internship->id}}" role="button">
                              Details
                          </a>
-                         <a class="btn btn-primary ml-0 mr-0" style="width: 46.8%;" href="#" role="button">
+                         <a class="btn btn-primary ml-0 mr-0" style="width: 46.8%;" href="/student/apply/{{$view_internship->id}}" role="button">
                              Apply
                          </a>
                      </div>

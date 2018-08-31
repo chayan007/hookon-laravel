@@ -76,12 +76,11 @@
     <div class="container">
         <div class="col-md-12 pb-4">
            <div class="row" style="height: 7vh;">
-                <img class="company-main-logo ml-auto mr-auto" src="assets/ExtraAssets/company_placeholder_logo.png">
+                <img class="company-main-logo ml-auto mr-auto" src="{{$internship->logo_url}}">
             </div>
-            <h5 class="text-center">Company Name</h5>
-            <h6 class="text-center">company@company.com</h6>
-            <h6 class="text-center">Bangalore, Karnataka</h6><br/>
-            <h3 class="text-center">Web Developer Internship</h3>
+            <h5 class="text-center">{{$internship->company}}</h5>
+            <h6 class="text-center">{{$internship->location}}</h6><br/>
+            <h3 class="text-center">{{$internship->profile}} Internship</h3>
 
 
             <br/>
@@ -95,15 +94,15 @@
                     <span  style="font-size: 1.1rem;color: #bfbfbf;">Required Skills:</span>
                 </div>
                 <div class="col-7">
-                    <span style="font-size: 1.1rem;"> Internship_location</span>
+                    <span style="font-size: 1.1rem;"> {{$internship->location}}</span>
                     <br/><br/>
-                    <span style="font-size: 1.1rem;"> Internship_stipend</span>
+                    <span style="font-size: 1.1rem;"> {{$internship->stipend}}</span>
                     <br/><br/>
-                    <span style="font-size: 1.1rem;"> Internship_duration</span>
+                    <span style="font-size: 1.1rem;"> {{$internship->duration}} months</span>
                     <br/><br/>
                     <span style="font-size: 1.1rem;"> Internship start date</span>
                     <br/><br/>
-                    <span style="font-size: 1.1rem;"> PHP, Java, JS , HTML , CSS, Adobe Photoshop</span>
+                    <span style="font-size: 1.1rem;"> {{$internship->skills}}</span>
                 </div>
             </div>
 
@@ -117,8 +116,7 @@
          <div class="pt-4">
             <div class="col-md-12">
                 <h5>About the company:</h5>
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum mi, ut sollicitudin est. Vestibulum ac ultricies dui. Donec nec tempor dui. Etiam consectetur eget justo at commodo. Sed finibus lorem rhoncus magna vulputate, eget tempus ex convallis. Integer nec risus quam. Nulla egestas ex libero, non condimentum sapien sollicitudin at. Morbi vitae massa fringilla, imperdiet ipsum a, commodo elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel facilisis mauris. Cras rhoncus faucibus mi, eget venenatis felis imperdiet maximus. Duis id porta erat.</p>
-                <p class="text-justify mb-0">Sed felis leo, volutpat sed massa ac, luctus maximus orci. Vestibulum enim ipsum, euismod eu gravida ut, cursus nec velit. Praesent tincidunt nisl suscipit consequat cursus. Vivamus in sem porttitor, ultricies ante sit amet, faucibus erat. Vivamus sed libero neque. Cras eu convallis purus. Praesent sed facilisis est. Suspendisse aliquam, tellus eu dapibus iaculis, lorem eros ultrices neque, vel eleifend justo odio eu nunc. Suspendisse ornare, lacus a finibus egestas, magna elit feugiat lacus, ultricies sollicitudin nibh tortor eu lorem. Suspendisse sed sollicitudin turpis, ac venenatis turpis.</p>
+                <p class="text-justify mb-0">{{$internship->about}}</p>
              </div>
           </div>
 
@@ -131,8 +129,7 @@
          <div class="pt-4">
             <div class="col-md-12">
                 <h5>Description of the job:</h5>
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum mi, ut sollicitudin est. Vestibulum ac ultricies dui. Donec nec tempor dui. Etiam consectetur eget justo at commodo. Sed finibus lorem rhoncus magna vulputate, eget tempus ex convallis. Integer nec risus quam. Nulla egestas ex libero, non condimentum sapien sollicitudin at. Morbi vitae massa fringilla, imperdiet ipsum a, commodo elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel facilisis mauris. Cras rhoncus faucibus mi, eget venenatis felis imperdiet maximus. Duis id porta erat.</p>
-                <p class="text-justify mb-0">Sed felis leo, volutpat sed massa ac, luctus maximus orci. Vestibulum enim ipsum, euismod eu gravida ut, cursus nec velit. Praesent tincidunt nisl suscipit consequat cursus. Vivamus in sem porttitor, ultricies ante sit amet, faucibus erat. Vivamus sed libero neque. Cras eu convallis purus. Praesent sed facilisis est. Suspendisse aliquam, tellus eu dapibus iaculis, lorem eros ultrices neque, vel eleifend justo odio eu nunc. Suspendisse ornare, lacus a finibus egestas, magna elit feugiat lacus, ultricies sollicitudin nibh tortor eu lorem. Suspendisse sed sollicitudin turpis, ac venenatis turpis.</p>
+                <p class="text-justify mb-0">{{$internship->desc}}</p>
              </div>
           </div>
 

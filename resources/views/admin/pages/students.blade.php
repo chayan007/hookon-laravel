@@ -29,22 +29,22 @@
                 </tr>
                 </thead>
                 <tbody id="dataset">
-                    @foreach($students as $student)
-                    <tr>
-                      <td>{{$student->id}}</td>
-                      <td>{{$student->name}}</td>
-                      <td>{{$student->email}}</td>
-                      <td>{{$student->phone}}</td>
-                      <td>{{$student->dob}}</td>
-                      <td>{{$student->skills}}</td>
-                      <td><img src="{{ $student->image_url }}" height="30px" width="40px"></img></td>
-                      <td><a href="{{$student->cv_url}}">Click Here</a></td>
-                      <td>
-                      <!-- Button trigger modal -->
-                          <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modelId{{$student->id}}">
-                        Edit
-                      </button></td>
-                      <td> <a href="/student/delete/{{$student->id}}"<button type="button" class="btn btn-danger">Delete</button></a> </td>
+                    @foreach ($students as $student)
+                <tr>
+                  <td>{{$student->id}}</td>
+                  <td>{{$student->name}}</td>
+                  <td>{{$student->email}}</td>
+                  <td>{{$student->phone}}</td>
+                  <td>{{$student->dob}}</td>
+                  <td>{{$student->skills}}</td>
+                  <td><img src="{{ $student->image_url }}" height="30px" width="40px"></img></td>
+                  <td><a href="{{$student->cv_url}}">Click Here</a></td>
+                  <td>
+                  <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modelId{{$student->id}}">
+                    Edit
+                  </button></td>
+                  <td> <a href="/student/delete/{{$student->id}}"<button type="button" class="btn btn-danger">Delete</button></a> </td>
 
                         <!-- Modal -->
                         <div class="modal fade" id="modelId{{$student->id}}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
@@ -80,7 +80,7 @@
                                               <label for="">Skills</label>
                                               <textarea class="form-control" name="skills" id="" aria-describedby="helpId" >{{$student->skills}}</textarea>
                                               </div>
-
+                                                //include password also
                                               </div>
                                               <div class="modal-footer">
                                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
