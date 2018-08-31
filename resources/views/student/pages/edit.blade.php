@@ -20,6 +20,11 @@
                 <small id="helpId" class="form-text text-muted">Just your new name</small>
                 </div>
                 <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" name="password" id="" aria-describedby="helpId" value="{{Auth::user()->password}}">
+                <small id="helpId" class="form-text text-muted">Enter a new password to change or keep it as it is</small>
+                </div>
+                <div class="form-group">
                 <label for="">Email</label>
                 <input type="text" class="form-control" name="email" id="" readonly aria-describedby="helpId" value="{{Auth::user()->email}}">
                 <small id="helpId" class="form-text text-muted">Just your eMail ID</small>

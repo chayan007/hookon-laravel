@@ -20,6 +20,11 @@
                 <small id="helpId" class="form-text text-muted">Just your new name</small>
                 </div>
                 <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" name="password" id="" aria-describedby="helpId" value="{{Auth::user()->password}}">
+                <small id="helpId" class="form-text text-muted">Enter a new password to change or keep it as it is</small>
+                </div>
+                <div class="form-group">
                 <label for="">Profile Pic</label>
                 <input type="file" class="form-control-file" name="photo" id="" placeholder="" aria-describedby="fileHelpId">
                 <small id="fileHelpId" class="form-text text-muted">Just to check your cute face (below 1 MB)</small>
