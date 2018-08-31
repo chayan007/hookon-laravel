@@ -4,6 +4,11 @@
 @section('page_desc','Check Staus of Internships Posted !')
 @section('page_bread','Internship Status')
 @section('content')
+@if (session('status'))
+<div class="alert alert-info" role="alert" style="align-text:center">
+    <strong>{{ session('status') }}</strong>
+</div>
+@endif
 <section class="content">
       <div class="row">
         <div class="col-xs-12">
@@ -21,6 +26,8 @@
                   <th>Profile</th>
                   <th>Applicant</th>
                   <th>Applicant CV</th>
+                  <th>Status</th>
+                  <th>Action</th>
                 </tr>
                 </thead>
                 <tbody id="dataset">
@@ -30,6 +37,21 @@
                   <td>Win 95+</td>
                   <td> 4</td>
                   <td>CV hot</td>
+                  <td>
+                      <form action="/recruiter/changeStatus/{{$intern->id}}" method="POST">
+                          @csrf
+                          <div class="form-group">
+                            <select class="form-control" name="status" id="">
+                              <option>Seen</option>
+                              <option>Hired</option>
+                              <option>Rejected</option>
+                            </select>
+                          </div>
+                  </td>
+                  <td>
+                      <button type="submit" class="btn btn-primary">Change Status</button>
+                      </form>
+                  </td>
                 </tr>
                 </tbody>
                 <tfoot>
@@ -39,6 +61,8 @@
                   <th>Profile</th>
                   <th>Applicant</th>
                   <th>Applicant CV</th>
+                  <th>Status</th>
+                  <th>Action</th>
                 </tr>
                 </tfoot>
               </table>

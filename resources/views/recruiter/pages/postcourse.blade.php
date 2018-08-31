@@ -4,6 +4,11 @@
 @section('page_desc','Help students get best Training.')
 @section('page_bread','Add Course')
 @section('content')
+@if (session('status'))
+<div class="alert alert-info" role="alert" style="align-text:center">
+    <strong>{{ session('status') }}</strong>
+</div>
+@endif
 <div class="box box-default">
         <div class="box-header with-border">
           <h3 class="box-title">Add Course</h3>
@@ -12,8 +17,9 @@
           </div><!-- /.box-tools -->
         </div><!-- /.box-header -->
         <div class="box-body">
-          <form action="/recruiter/post_course" method="POST">
+          <form action="/recruiter/post_course" method="POST" enctype="multipart/form-data">
               @csrf
+              <input type="hidden" class="form-control" name="user_id" id="inputName" value="{{Auth::user()->id}}">
               <div class="form-group">
                 <label for="">Course Name</label>
                 <input type="text" class="form-control" name="course" id="" aria-describedby="helpId" placeholder="">

@@ -12,7 +12,7 @@
           </div><!-- /.box-tools -->
         </div><!-- /.box-header -->
         <div class="box-body">
-            <form method="POST" action="/recruiter/edit1" enctype="multipart/form-data">
+            <form method="POST" action="/recruiter/editme/{{Auth::user()->id}}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                 <label for="">Name</label>
@@ -21,7 +21,7 @@
                 </div>
                 <div class="form-group">
                 <label for="">Password</label>
-                <input type="password" class="form-control" name="password" id="" aria-describedby="helpId" value="{{Auth::user()->password}}">
+                <input type="password" class="form-control" name="password" id="" aria-describedby="helpId" placeholder="*  *  *  *  *  *  *  *">
                 <small id="helpId" class="form-text text-muted">Enter a new password to change or keep it as it is</small>
                 </div>
                 <div class="form-group">
