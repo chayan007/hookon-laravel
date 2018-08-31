@@ -57,13 +57,35 @@
                               </div>
                               <div class="modal-body">
                                   <div class="container-fluid">
-                                      Add rows here
-                                  </div>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary">Save</button>
-                              </div>
+                                    <form action="/recruiters/edit/{{$recruiter->id}}" method="post">
+                                      @csrf
+                                      <div class="form-group">
+                                      <label for="">Name</label>
+                                      <input type="text" class="form-control" value="{{$recruiter->name}}" name="name" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                      </div>
+                                      <div class="form-group">
+                                      <label for="">Email</label>
+                                      <input type="email" class="form-control" value ="{{$recruiter->email}}" name="email" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                      </div>
+                                      <div class="form-group">
+                                      <label for="">Phone</label>
+                                      <input type="text" class="form-control" value="{{$recruiter->phone}}" name="phone" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                      </div>
+                                      <div class="form-group">
+                                      <label for="">Date of Birth</label>
+                                      <input type="date" class="form-control" value="{{$recruiter->dob}}" name="dob" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                      </div>
+                                      <div class="form-group">
+                                      <label for="">Comapany Name</label>
+                                      <input type="text" class="form-control" value="{{$recruiter->comapny}}" name="company" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                      </div>
+
+                                      </div>
+                                      <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                          <button type="submit" class="btn btn-primary">Save</button>
+                                      </div>
+                                 </form>
                           </div>
                       </div>
                   </div>

@@ -24,9 +24,19 @@ class AdminController extends Controller
         $student->delete();
         $student->save();
     }
-    public function editStudent(Request $request)
+    public function editStudent(Request $request, $id)
     {
-        $student = Student::where('id',)
+        $student = Student::where('id',$id)->firstOrFail();
+
+        $student->name = $request->name;
+        $student->email = $request->email;
+        $student->phone = $request->phone;
+        $student->skills = $request->skills;
+        $student->dob = $request->dob;
+
+        $student->save();
+
+        return redirect('/admin/students');
 
 
     }
@@ -40,9 +50,19 @@ class AdminController extends Controller
         $recruiter = Recruiter::where('id', $id)->firstOrFail();
         $recruiter->delete();
     }
-    public function editRecruiter(Request $request)
+    public function editRecruiter(Request $request, $id)
     {
-        //Write the proper logic
+      $recruiter = Recruiter::where('id',$id)->firstOrFail();
+
+      $recruiter->name = $request->name;
+      $recruiter->email = $request->email;
+      $recruiter->phone = $request->phone;
+      $recruiter->company = $request->company;
+      $recruiter->dob = $request->dob;
+
+      $recruiter->save();
+
+      return redirect('/admin/recruiters');
     }
     public function viewCategory()
     {
@@ -85,9 +105,21 @@ class AdminController extends Controller
         $internships = Internship::all();
         return view('admin.pages.internships',['internships' => $internships]);
     }
-    public function editInternship($id)
+    public function editInternship(Request $request, $id)
     {
-        //Write logic
+      $internship = Internship::where('id',$id)->firstOrFail();
+
+      $internship->company = $request->company;
+      $internship->profile = $request->profile;
+      $internship->email = $request->email;
+      $internship->url = $request->url;
+      $internship->phone = $request->phone;
+      $internship->location = $request->location;
+      $internship->stipend = $request->stipend;
+
+      $internship->save();
+
+      return redirect('/admin/internships');
     }
     public function deleteInternship($id)
     {

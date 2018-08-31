@@ -29,9 +29,13 @@ Route::get('/specific_course', function(){
 Route::get('/search_skills', 'SearchController@search_skills');
 Route::get('/search_location', 'SearchController@search_location');
 Route::get('/recruiter/delete/{id}','AdminController@deleteRecruiter');
+Route::post('/recruiters/edit/{id}', 'AdminController@editRecruiter');
 Route::get('/student/delete/{id}', 'AdminController@deleteStudent');
+Route::post('/student/edit/{id}', 'AdminController@editStudent');
 Route::get('/category/delete/{id}','AdminController@deleteCategory');
 Route::get('/location/delete/{id}', 'AdminController@deleteLocation');
+Route::post('/internships/edit/{id}', 'AdminController@editInternship');
+
 
 Route::group(['prefix' => 'admin'], function () {
   Route::get('/login', 'AdminAuth\LoginController@showLoginForm')->name('login');

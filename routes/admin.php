@@ -11,6 +11,7 @@ Route::get('/admin', function () {
     return view('admin.pages.profile');
 })->name('dashboard');
 Route::get('/students', 'AdminController@viewStudent')->name('students');
+
 Route::get('/recruiters', 'AdminController@viewRecruiter')->name('recruiters');
 Route::get('/internships', 'AdminController@viewInternship')->name('internship');
 Route::get('/istatus', 'AdminController@viewInternshipStatus')->name('internship status');
@@ -21,4 +22,3 @@ Route::post('/category','AdminController@addCategory');
 Route::get('/category', 'AdminController@viewCategory')->name('category');
 Route::post('/location','AdminController@addLocation');
 Route::get('/location','AdminController@viewLocation')->name('location');
-

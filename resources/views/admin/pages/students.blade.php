@@ -29,73 +29,76 @@
                 </tr>
                 </thead>
                 <tbody id="dataset">
-                    @foreach ($students as $student)
-                <tr>
-                  <td>{{$student->id}}</td>
-                  <td>{{$student->name}}</td>
-                  <td>{{$student->email}}</td>
-                  <td>{{$student->phone}}</td>
-                  <td>{{$student->dob}}</td>
-                  <td>{{$student->skills}}</td>
-                  <td><img src="{{ $student->image_url }}" height="30px" width="40px"></img></td>
-                  <td><a href="{{$student->cv_url}}">Click Here</a></td>
-                  <td>
-                  <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modelId{{$student->id}}">
-                    Edit
-                  </button></td>
-                  <td> <a href="/student/delete/{{$student->id}}"<button type="button" class="btn btn-danger">Delete</button></a> </td>
-                  <!-- Modal -->
-                  <div class="modal fade" id="modelId{{$student->id}}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                                  <h4 class="modal-title" id="modelTitleId">Modal title</h4>
-                              </div>
-                              <div class="modal-body">
-                                  <div class="container-fluid">
-                                      <form class="" action="" method="post">
-                                        <div class="form-group">
-                                        <label for="">Name</label>
-                                        <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
-                                        </div>
-                                        <div class="form-group">
-                                        <label for="">Email</label>
-                                        <input type="text" class="form-control" name="email" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
-                                        </div>
-                                        <div class="form-group">
-                                        <label for="">Phone</label>
-                                        <input type="text" class="form-control" name="phone" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
-                                        </div>
-                                        <div class="form-group">
-                                        <label for="">Date of Birth</label>
-                                        <input type="date" class="form-control" name="dob" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
-                                        </div>
-                                        <div class="form-group">
-                                        <label for="">Skills</label>
-                                        <textarea class="form-control" name="skills" id="" aria-describedby="helpId" >{{Auth::user()->name}}</textarea>
-                                        </div>
+                    @foreach($students as $student)
+                    <tr>
+                      <td>{{$student->id}}</td>
+                      <td>{{$student->name}}</td>
+                      <td>{{$student->email}}</td>
+                      <td>{{$student->phone}}</td>
+                      <td>{{$student->dob}}</td>
+                      <td>{{$student->skills}}</td>
+                      <td><img src="{{ $student->image_url }}" height="30px" width="40px"></img></td>
+                      <td><a href="{{$student->cv_url}}">Click Here</a></td>
+                      <td>
+                      <!-- Button trigger modal -->
+                          <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modelId{{$student->id}}">
+                        Edit
+                      </button></td>
+                      <td> <a href="/student/delete/{{$student->id}}"<button type="button" class="btn btn-danger">Delete</button></a> </td>
 
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary">Save</button>
-                                        </div>
-                                   </form>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modelId{{$student->id}}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                                        <h4 class="modal-title" id="modelTitleId">Modal title</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container-fluid">
+                                            <form action="/student/edit/{{$student->id}}" method="post">
+                                              @csrf
+                                              <div class="form-group">
+                                              <label for="">Name</label>
+                                              <input type="text" class="form-control" value="{{$student->name}}" name="name" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                              </div>
+                                              <div class="form-group">
+                                              <label for="">Email</label>
+                                              <input type="email" class="form-control" value ="{{$student->email}}" name="email" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                              </div>
+                                              <div class="form-group">
+                                              <label for="">Phone</label>
+                                              <input type="text" class="form-control" value="{{$student->phone}}" name="phone" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                              </div>
+                                              <div class="form-group">
+                                              <label for="">Date of Birth</label>
+                                              <input type="date" class="form-control" value="{{$student->dob}}" name="dob" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                              </div>
+                                              <div class="form-group">
+                                              <label for="">Skills</label>
+                                              <textarea class="form-control" name="skills" id="" aria-describedby="helpId" >{{$student->skills}}</textarea>
+                                              </div>
+
+                                              </div>
+                                              <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                  <button type="submit" class="btn btn-primary">Save</button>
+                                              </div>
+                                         </form>
+                                    </div>
+                                </div>
                               </div>
-                          </div>
-                      </div>
-                              </div>
-                               <script>
+                            </div>
+
+                               <!--<script>
                       $('#exampleModal').on('show.bs.modal', event => {
                           var button = $(event.relatedTarget);
                           var modal = $(this);
                           // Use above variables to manipulate the DOM
                       });
-                  </script>
+                  </script>-->
                 </tr>
                     @endforeach
 

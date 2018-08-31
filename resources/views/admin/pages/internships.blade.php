@@ -59,17 +59,42 @@
                               </div>
                               <div class="modal-body">
                                   <div class="container-fluid">
-                                      <form action="/admin/edit/course/{{ $internship->id }}" method="POST">
-                                          @csrf
-                                          //Do the rest
-                                          // make a hidden input for post id with value {{ $internship->id }}
-                                      </form>
-                                  </div>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary">Save</button>
-                              </div>
+                                    <form action="/internships/edit/{{$internship->id}}" method="post">
+                                      @csrf
+                                      <div class="form-group">
+                                      <label for="">Company</label>
+                                      <input type="text" class="form-control" value="{{$internship->company}}" name="company" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                      </div>
+                                      <div class="form-group">
+                                      <label for="">Profile</label>
+                                      <input type="text" class="form-control" value ="{{$internship->profile}}" name="profile" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                      </div>
+                                      <div class="form-group">
+                                      <label for="">Email</label>
+                                      <input type="email" class="form-control" value="{{$internship->email}}" name="email" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                      </div>
+                                      <div class="form-group">
+                                      <label for="">URL</label>
+                                      <input type="date" class="form-control" value="{{$internship->url}}" name="url" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                      </div>
+                                      <div class="form-group">
+                                      <label for="">Phone</label>
+                                      <input type="text" class="form-control" value="{{$internship->phone}}" name="phone" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                      </div>
+                                      <div class="form-group">
+                                      <label for="">Location</label>
+                                      <input type="text" class="form-control" value="{{$internship->location}}" name="location" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                      </div>
+                                      <div class="form-group">
+                                      <label for="">Stipend</label>
+                                      <input type="number" class="form-control" value="{{$internship->stipend}}" name="stipend" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                      </div>
+                                      </div>
+                                      <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                          <button type="submit" class="btn btn-primary">Save</button>
+                                      </div>
+                                 </form>
                           </div>
                       </div>
                   </div>
