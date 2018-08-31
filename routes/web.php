@@ -18,7 +18,8 @@ Route::post('/search_internships', 'PublicController@view_internship');
 Route::get('/search_internships', 'PublicController@view_internship');
 Route::post('/search_course','PublicController@view_courses');
 Route::get('/search_course', 'PublicController@view_courses');
-
+Route::get('/internship/{id}','PublicController@view_specific_internship');
+Route::get('/course/{id}', 'PublicController@view_specific_course');
 Route::get('/specific_internship', function(){
    return view('specific_internship');
 });

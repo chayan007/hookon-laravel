@@ -57,7 +57,7 @@
                               </div>
                               <div class="modal-body">
                                   <div class="container-fluid">
-                                      <form class="" action="" method="post">
+                                      <form action="/admin/update/student/{{$student->id}}" method="post">
                                         <div class="form-group">
                                         <label for="">Name</label>
                                         <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">

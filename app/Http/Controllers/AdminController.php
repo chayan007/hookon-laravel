@@ -24,9 +24,9 @@ class AdminController extends Controller
         $student->delete();
         $student->save();
     }
-    public function editStudent(Request $request)
+    public function editStudent(Request $request,$id)
     {
-        $student = Student::where('id',)
+        $student = Student::where('id',$id)->firstOrFail();
 
 
     }

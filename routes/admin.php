@@ -21,4 +21,6 @@ Route::post('/category','AdminController@addCategory');
 Route::get('/category', 'AdminController@viewCategory')->name('category');
 Route::post('/location','AdminController@addLocation');
 Route::get('/location','AdminController@viewLocation')->name('location');
-
+Route::post('/update/student/{id}','AdminController@editStudent');
+Route::post('/update/recruiter/{id}', 'AdminController@editRecruiter');
+Route::post('/update/internship/{id}', 'AdminController@editInternship');
