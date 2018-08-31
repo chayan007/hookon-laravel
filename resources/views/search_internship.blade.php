@@ -455,18 +455,8 @@ $("#skills").on('keyup',function(){
                   'val' : $value,
               },
               success:function(data){
-                for(var i=0;i<data.length;i++){
-                  $("#display").html(data[i]['category_name']).show();
-                  //autocomp_skills(document.getElementById("skills"), data);
-                  /*for(var i=0;i<data.length;i++){
-                    $("#display").click( function(){
-                      inp.value = data[i]['category_name'];
-                    });
-                  }*/
-
-                  $("#display").html("<br/>")
-                }
-                console.log("skills is "+data);
+                autocomplete_skills(document.getElementById("skills"), data);
+                console.log("data is "+data['category_name']);
               },
   });
 });

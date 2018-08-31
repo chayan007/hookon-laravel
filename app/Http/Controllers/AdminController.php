@@ -26,7 +26,8 @@ class AdminController extends Controller
     }
     public function editStudent(Request $request)
     {
-        //Write the Proper Logic
+        $student = Student::where('id',)
+
 
     }
     public function viewRecruiter()
