@@ -83,25 +83,25 @@
         </div>
 
         <div class="row py-2 justify-content-center">
-            <form class="mbr-form" action="" method="">
+            <form class="mbr-form" action="/search_course" method="POST">
                <div class="col-12">
                    <div class="row">
                                <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label for="">Search by Skills</label>
-                                        <input type="text" autocomplete="off" class="form-control" name="" id="skills" aria-describedby="helpId" aria-label="Large" placeholder="I want courses for ....">
+                                        <input type="text" autocomplete="off" class="form-control" name="category" id="skills" aria-describedby="helpId" aria-label="Large" placeholder="I want courses for ....">
                                         <small id="helpId" class="form-text text-muted">Enter the domain of your course</small>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label for="">Search by Location</label>
-                                        <input type="text" autocomplete="off" class="form-control" name="" id="location" aria-describedby="helpId" aria-label="Large" placeholder="I want courses at .....">
+                                        <input type="text" autocomplete="off" class="form-control" name="location" id="location" aria-describedby="helpId" aria-label="Large" placeholder="I want courses at .....">
                                         <small id="helpId" class="form-text text-muted">Enter the location of course</small>
                                     </div>
                                 </div>
                                 <span class="input-group-btn justify-content-center ml-auto mr-auto" >
-                                    <button href="" type="submit" class="btn btn-primary display-4">
+                                    <button type="submit" class="btn btn-primary display-4">
                                         <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>SEARCH</button>
                                 </span>
                    </div>

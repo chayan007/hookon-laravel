@@ -1,15 +1,15 @@
 @extends('admin.layout.adminbase')
-@section('page_name','Recruiter Database')
-@section('page_header','Recruiters')
-@section('page_desc','See details of all recruiters registered')
-@section('page_bread','Recruiters')
+@section('page_name','Intern Database')
+@section('page_header','Interns')
+@section('page_desc','See details of all Interns Applied')
+@section('page_bread','Interns')
 @section('content')
 <section class="content">
       <div class="row">
         <div class="col-xs-12">
             <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Internships Posted !</h3>
+              <h3 class="box-title">Interns Applied !</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -24,12 +24,15 @@
                 </tr>
                 </thead>
                 <tbody id="dataset">
+                    @foreach ($interns as $intern)
                 <tr>
-                  <td>1</td>
-                  <td>Satyam Infotech</td>
-                  <td>Web Developer</td>
-                  <td>sonicxxx7@gmail.com</td>
+                  <td>{{ $intern->id }}</td>
+                  <td>{{ $intern->company }}</td>
+                  <td>{{ $intern->profile }}</td>
+                  <td>{{ $intern->student }}</td>
+                  <td>{{ $intern->status }}</td>
                 </tr>
+                  @endforeach
                 </tbody>
                 <tfoot>
                   <tr>

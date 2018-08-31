@@ -23,7 +23,7 @@ class CreateTableInterns extends Migration
             $table->integer('student_id');
             $table->string('student');
             $table->dateTime('applied_at');
-            $table->integer('status');
+            $table->string('status');
             $table->timestamps();
         });
     }

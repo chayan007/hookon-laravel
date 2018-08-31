@@ -12,7 +12,7 @@
           </div><!-- /.box-tools -->
         </div><!-- /.box-header -->
         <div class="box-body">
-          <form action="/recruiter/postcourse" method="POST">
+          <form action="/recruiter/postcourse/{{$course->id}}" method="POST">
               @csrf
               <div class="form-group">
                 <label for="">Course Name</label>
@@ -60,7 +60,7 @@
                 <label for="">Course Syllabus</label>
                 <textarea class="form-control" name="syllabus" id="" rows="8"></textarea>
               </div>
-              <button type="button" name="" id="" class="btn btn-info btn-lg btn-block">Edit Course</button>
+              <button type="submit" class="btn btn-info btn-lg btn-block">Edit Course</button>
           </form>
         </div><!-- /.box-body -->
       </div><!-- /.box -->

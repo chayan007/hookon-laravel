@@ -1,8 +1,8 @@
 @extends('admin.layout.adminbase')
-@section('page_name','Recruiter Database')
-@section('page_header','Recruiters')
-@section('page_desc','See details of all recruiters registered')
-@section('page_bread','Recruiters')
+@section('page_name','Internships Database')
+@section('page_header','Internshipss')
+@section('page_desc','See details of all Internships registered')
+@section('page_bread','Internships')
 @section('content')
 <section class="content">
       <div class="row">
@@ -30,24 +30,25 @@
                 </tr>
                 </thead>
                 <tbody id="dataset">
+                    @foreach ($internships as $internship)
                 <tr>
-                  <td>1</td>
-                  <td>Satyam Infotech</td>
-                  <td>Web Developer</td>
-                  <td>sonicxxx7@gmail.com</td>
-                  <td><img src="{{ asset('img/logo.png') }}" height="30px" width="40px"></img></td>
-                  <td>satyam.info</td>
-                  <td>9477446558</td>
-                  <td>Kolkata</td>
-                  <td>12000</td>
+                  <td>{{ $internship->id }}</td>
+                  <td>{{ $internship->company }}</td>
+                  <td>{{ $internship->profile }}</td>
+                  <td>{{ $internship->email }}</td>
+                  <td><img src="{{ $internship->logo_url }}" height="30px" width="40px"></img></td>
+                  <td>{{ $internship->url }}</td>
+                  <td>{{ $internship->phone }}</td>
+                  <td>{{ $internship->location }}</td>
+                  <td>{{ $internship->stipend }}</td>
                   <td>
                   <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modelId">
+                      <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modelId{{ $internship->id }}">
                     Edit
                   </button></td>
                   <td> <button type="button" class="btn btn-danger">Delete</button> </td>
                   <!-- Modal -->
-                  <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                  <div class="modal fade" id="modelId{{ $internship->id }}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                           <div class="modal-content">
                               <div class="modal-header">
@@ -58,7 +59,11 @@
                               </div>
                               <div class="modal-body">
                                   <div class="container-fluid">
-                                      Add rows here
+                                      <form action="/admin/edit/course/{{ $internship->id }}" method="POST">
+                                          @csrf
+                                          //Do the rest
+                                          // make a hidden input for post id with value {{ $internship->id }}
+                                      </form>
                                   </div>
                               </div>
                               <div class="modal-footer">
@@ -78,6 +83,7 @@
                       });
                   </script>
                 </tr>
+                 @endforeach
                 </tbody>
                 <tfoot>
                <tr>

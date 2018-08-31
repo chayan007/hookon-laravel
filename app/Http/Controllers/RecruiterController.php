@@ -54,6 +54,7 @@ class RecruiterController extends Controller
       $internship->stipend = $request->stipend;
 
       //Check these-
+      $internship->user_id = $request->user_id;
       $internship->category_id = $cat_id;
       $internship->location_id = $loc_id;
 
@@ -73,49 +74,59 @@ class RecruiterController extends Controller
 
       $course->course = $request->course;
       $course->instructor = $request->instructor;
-      //$internship->photo = $request->photo;
             $file = $request->photo;
             $path = $file->store('public/img/course');
-            $course->photo = $path;
-            $course->save();
+            $course->photo_url = $path;
       //To fix: File upload and file reflection in UI not working
 
       $course->url = $request->url;
       $course->company = $request->company;
       $course->location = $request->location;
-      $course->photo_url = "";
       $course->domain = $request->domain;
       $course->about = $request->about;
       $course->syllabus = $request->syllabus;
 
       //Check these-
-      $course->user_id = Auth::user()->id;
+      $course->user_id = $request->user_id;
       $course->category_id = $cat_id;
       $course->location_id = $loc_id;
 
       $course->save();
       //dd($student);
-      return redirect('/recruiter/profile');
+      return redirect('/recruiter/postcourse')->with('status','Course has been Posted !');
   }
-  public function editInternship()
+  public function viewInternship()
   {
-      $internships= Internship::where('user_id',Auth::user()->id);
-      dd($internships);
+      $locations = Location::all();
+      $categories = Category::all();
+      $internships= Internship::where('user_id',Auth::user()->id)->get();
+      return view('recruiter.pages.editinternship',[
+          'internships' => $internships,
+          'categories' => $categories,
+          'locations' => $locations,
+      ]);
 
+  }
+  public function editInternship(Request $request, $id)
+  {
+    //Write appropriate logic
+  }
+  public function editCourse(Request $request, $id)
+  {
+    //Write appropriate logic
   }
   public function predict()
   {
-
       return view('recruiter.pages.edit');
   }
-  public function edit1(Request $request)
+  public function edit(Request $request, $id)
   {
-      //$student= App\Student::where('id',1)->firstOrFail();
       try{
-        $recruiter= Recruiter::where('id',Auth::user()->id)->firstOrFail();
+        $recruiter= Recruiter::where('id',$id)->firstOrFail();
       }catch(Exception $e){
-        redirect('/recruiter/profile');
+        return redirect('/recruiter/profile')->with('error','Record Not Found');
       }
+      //dd($request);
       if($request->name != null){
            $recruiter->name=$request->name;
            $recruiter->save();
@@ -148,7 +159,13 @@ class RecruiterController extends Controller
       }
 
       $recruiter->save();
-      //dd($student);
-      return redirect('/recruiter/profile');
+      return redirect('/recruiter/profile')->with('status','Details have been successfully changed !');
+  }
+  public function changeStatus(Request $request, $id)
+  {
+    $intern = Intern::where('id',$id)->firstOrFail();
+    $intern->status = $request->status;
+    $intern->save();
+    return redirect('/recruiter/status')->with('status','Status has been changed Successfully !');
   }
 }
