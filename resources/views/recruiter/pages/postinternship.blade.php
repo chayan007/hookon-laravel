@@ -84,8 +84,18 @@
                 <small id="helpId" class="form-text text-muted">Just to let interns know about it</small>
                 </div>
                 <div class="form-group">
+                <label for="">Start Date</label>
+                <input type="text" class="form-control" name="start_date" id="" aria-describedby="helpId" placeholder="Enter the skills (separated by comma)">
+                <small id="helpId" class="form-text text-muted">Just to make Interns know when to start the work</small>
+                </div>
+                <div class="form-group">
                 <label for="">Stipend</label>
                 <input type="number" class="form-control" name="stipend" id="" aria-describedby="helpId" placeholder="Enter the Monthly stipend">
+                <small id="helpId" class="form-text text-muted">Just to let Interns know about the fruit</small>
+                </div>
+                <div class="form-group">
+                <label for="">Perks</label>
+                <input type="number" class="form-control" name="perks" id="" aria-describedby="helpId" placeholder="Enter the skills (separated by comma)">
                 <small id="helpId" class="form-text text-muted">Just to let Interns know about the fruit</small>
                 </div>
                 <button type="submit" name="" id="" class="btn btn-success btn-lg btn-block"> Submit </button>

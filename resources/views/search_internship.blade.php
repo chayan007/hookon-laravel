@@ -1,7 +1,5 @@
-
 @extends('layouts.app')
-
-
+@section('page_name','Search an Internship | Hookon Internships')
 @section('content')
 
 <section class="mbr-section form3 cid-qYhiUhftNR" id="form3-11">

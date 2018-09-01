@@ -25,6 +25,8 @@
                   <th>Phone</th>
                   <th>Location</th>
                   <th>Stipend</th>
+                  <th>Start Date</th>
+                  <th>Perks</th>
                   <th>Edit</th>
                   <th>Delete</th>
                 </tr>
@@ -41,6 +43,9 @@
                   <td>{{ $internship->phone }}</td>
                   <td>{{ $internship->location }}</td>
                   <td>{{ $internship->stipend }}</td>
+                  <td>{{ $internship->start_date }}</td>
+                  <td>{{ $internship->perks}}</td>
+
                   <td>
                   <!-- Button trigger modal -->
                       <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modelId{{ $internship->id }}">
@@ -121,6 +126,8 @@
                   <th>Phone</th>
                   <th>Location</th>
                   <th>Stipend</th>
+                  <th>Start Date</th>
+                  <th>Perks</th>
                   <th>Edit</th>
                   <th>Delete</th>
                 </tr>

@@ -1,6 +1,5 @@
 @extends('layouts.app')
-
-
+@section('page_name','Internship details')
 @section('content')
 
 <section id="background-section" style="background-color: #D84F57;"></section>

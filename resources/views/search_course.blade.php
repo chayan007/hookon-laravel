@@ -1,6 +1,5 @@
 @extends('layouts.app')
-
-
+@section('page_name','Search a Course | Hookon Internships')
 @section('content')
 
 

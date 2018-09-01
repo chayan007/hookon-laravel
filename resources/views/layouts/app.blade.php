@@ -6,11 +6,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="_token" content="{{ csrf_token() }}">
-  <meta name="generator" content="Mobirise v4.7.2, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/logo2.png" type="image/x-icon">
-  <meta name="description" content="">
-  <title>Home</title>
+  <link rel="shortcut icon" href="{{asset('assets/ExtraAssets/hookon.png')}}" />  <meta name="description" content="">
+      <title>@yield('page_name')</title>
   <link rel="stylesheet" href="{{ asset('assets/web/assets/mobirise-icons/mobirise-icons.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css') }} ">
   <!--<link rel="stylesheet" href="{{ asset('assets/tether/tether.min.css') }}">-->
@@ -50,6 +48,7 @@
       <!-- AdminLTE App -->
       <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
 
+      <!-- My scripts---->
       <script src="{{asset('assets/main.js')}}"></script>
 </body>
 </html>
