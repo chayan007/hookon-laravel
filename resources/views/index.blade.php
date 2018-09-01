@@ -1,72 +1,8 @@
 @extends('layouts.app')
 
-
 @section('content')
 
 
-  <section class="menu cid-qQriDdF7cR" once="menu" id="menu1-e" >
-
-
-
-    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm" style="background-color:#fafafa;">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="hamburger">
-                <span style="background:black;"></span>
-                <span style="background:black;"></span>
-                <span style="background:black;"></span>
-                <span style="background:black;"></span>
-            </div>
-        </button>
-        <div class="menu-logo">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-                    <a href="#">
-                         <img src="{{ asset('assets/ExtraAssets/hookon.png') }}" alt="Hookon" style="height: 4.4rem;">
-                    </a>
-                </span>
-
-            </div>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                <li class="nav-item">
-                    <a class="link display-4" style="color:black;" href=""><span class="mbri-target mbr-iconfont mbr-iconfont-btn"></span>Students</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link display-4" style="color:black;" href=""><span class="mbri-briefcase mbr-iconfont mbr-iconfont-btn"></span>Recruiters</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link display-4" style="color:black;" href=""><span class="mbri-devices mbr-iconfont mbr-iconfont-btn"></span>Courses</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link display-4" style="color:black;" href=""><span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>Search &nbsp;</a>
-                </li>
-            </ul>
-
-            <div class="dropdown show">
-              <a class="btn btn-primary dropdown-toggle display-4" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Login
-              </a>
-
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="/student/login">Student Login</a>
-                <a class="dropdown-item" href="/recruiter/login">Recruiter Login</a>
-              </div>
-            </div>
-
-            <div class="dropdown show">
-              <a class="btn btn-primary dropdown-toggle display-4" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Register
-              </a>
-
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="/student/register">Student Register</a>
-                <a class="dropdown-item" href="/recruiter/register">Recruiter Register</a>
-              </div>
-            </div>
-        </div>
-    </nav>
-</section>
 
 <section class="cid-qQriDf8GmN pb-1" style="background-color: #fff;background-image: url(assets/ExtraAssets/hero.jpg); background-position: 50% 50%; background-size: cover;">
 
@@ -79,7 +15,7 @@
             <div class="mbr-white col-md-10 mb-5">
                 <h3 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style" style="color: #fff;">Connecting Talents and Companies</h3>
                 <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" href="/search_internships">I NEED INTERNSHIPS</a>
-                    <a class="btn btn-md btn-white-outline display-4" href="/search_course">I NEED SKILLS</a></div>
+                    <a class="btn btn-md btn-white-outline display-4" style="border:1px solid #fff;" href="/search_course">I NEED SKILLS</a></div>
             </div>
         </div>
     </div>
@@ -303,205 +239,11 @@
 </section>  <!--End of Companies we list-->
 
 
-
-
-
-<!--<section class="features6 cid-qXwjhLDiPh" id="features6-i">
-
-
-
-    <div class="container">
-        <div class="media-container-row">
-            <div class="card p-3 col-12 col-md-6 col-lg-4">
-                <div class="card-img pb-3">
-                    <span class="mbri-bootstrap mbr-iconfont"></span>
-                </div>
-                <div class="card-box">
-                    <h4 class="card-title py-3 mbr-fonts-style display-7">
-                        Apply for Internships</h4>
-                    <p class="mbr-text mbr-fonts-style display-7">
-                       Mobirise is an easy website builder - just drop site elements to your page, add content and style it to look the way you like.
-                    </p>
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-6 col-lg-4">
-                <div class="card-img pb-3">
-                    <span class="mbri-touch mbr-iconfont"></span>
-                </div>
-                <div class="card-box">
-                    <h4 class="card-title py-3 mbr-fonts-style display-7">
-                        Get Certified</h4>
-                    <p class="mbr-text mbr-fonts-style display-7">
-                       All sites you make with Mobirise are mobile-friendly. You don't have to create a special mobile version of your site.
-                    </p>
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-6 col-lg-4">
-                <div class="card-img pb-3">
-                    <span class="mbri-responsive mbr-iconfont"></span>
-                </div>
-                <div class="card-box">
-                    <h4 class="card-title py-3 mbr-fonts-style display-7">
-                        Apply for Courses</h4>
-                    <p class="mbr-text mbr-fonts-style display-7">
-                       Mobirise offers many site blocks in several themes, and though these blocks are pre-made, they are flexible.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>-->
-
-<!--<section class="clients cid-qXKPOuCwxn" id="clients-o">
-
-
-        <div class="container mb-5">
-            <div class="media-container-row">
-                <div class="col-12 align-center">
-                    <h2 class="mbr-section-title pb-3 mbr-fonts-style display-2">
-                        Our Clients
-                    </h2>
-                </div>
-            </div>
-        </div>
-    <div class="container">
-        <div class="carousel slide" data-ride="carousel" role="listbox">
-            <div class="carousel-inner" data-visible="5">
-
-
-
-
-
-            <div class="carousel-item ">
-                    <div class="media-container-row">
-                        <div class="col-md-12">
-                            <div class="wrap-img ">
-                                <img src="assets/images/1.png" class="img-responsive clients-img">
-                            </div>
-                        </div>
-                    </div>
-                </div><div class="carousel-item ">
-                    <div class="media-container-row">
-                        <div class="col-md-12">
-                            <div class="wrap-img ">
-                                <img src="assets/images/2.png" class="img-responsive clients-img">
-                            </div>
-                        </div>
-                    </div>
-                </div><div class="carousel-item ">
-                    <div class="media-container-row">
-                        <div class="col-md-12">
-                            <div class="wrap-img ">
-                                <img src="assets/images/3.png" class="img-responsive clients-img">
-                            </div>
-                        </div>
-                    </div>
-                </div><div class="carousel-item ">
-                    <div class="media-container-row">
-                        <div class="col-md-12">
-                            <div class="wrap-img ">
-                                <img src="assets/images/4.png" class="img-responsive clients-img">
-                            </div>
-                        </div>
-                    </div>
-                </div><div class="carousel-item ">
-                    <div class="media-container-row">
-                        <div class="col-md-12">
-                            <div class="wrap-img ">
-                                <img src="assets/images/5.png" class="img-responsive clients-img">
-                            </div>
-                        </div>
-                    </div>
-                </div></div>
-            <div class="carousel-controls">
-                <a data-app-prevent-settings="" class="carousel-control carousel-control-prev" role="button" data-slide="prev">
-                    <span aria-hidden="true" class="mbri-left mbr-iconfont"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a data-app-prevent-settings="" class="carousel-control carousel-control-next" role="button" data-slide="next">
-                    <span aria-hidden="true" class="mbri-right mbr-iconfont"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>-->
-
-<!--<section class="mbr-section form4 cid-qXzeBZnTmE" id="form4-m">
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:ChIJn6wOs6lZwokRLKy1iqRcoKw" allowfullscreen=""></iframe></div>
-            </div>
-            <div class="col-md-6">
-                <h2 class="pb-3 align-left mbr-fonts-style display-2">
-                    Drop a Line
-                </h2>
-                <div>
-                    <div class="icon-block pb-3">
-                        <span class="icon-block__icon">
-                            <span class="mbri-letter mbr-iconfont"></span>
-                        </span>
-                        <h4 class="icon-block__title align-left mbr-fonts-style display-5">
-                            Don't hesitate to contact us
-                        </h4>
-                    </div>
-                    <div class="icon-contacts pb-3">
-                        <h5 class="align-left mbr-fonts-style display-7">
-                            Ready for offers and cooperation
-                        </h5>
-                        <p class="mbr-text align-left mbr-fonts-style display-7">
-                            Phone: +1 (0) 000 0000 001 <br>
-                            Email: youremail@mail.com
-                        </p>
-                    </div>
-                </div>
-                <div data-form-type="formoid">
-                    <div data-form-alert="" hidden="">
-                        Thanks for filling out the form!
-                    </div>
-                    <form class="block mbr-form" action="https://mobirise.com/" method="post" data-form-title="Mobirise Form"><input type="hidden" name="email" data-form-email="true" value="IW+AaUErRR8e8ya/M6fK9l1kWGaDFLsw+Bf+c297aSG0Nh3t5NsiJQoQphiyej+uf4eNtR/w2+idGhWKHEQexdY31HYyOF8OA3qcs5Cgqt3fYl2fHcmpX33+OSxeG4XV" data-form-field="Email">
-                        <div class="row">
-                            <div class="col-md-6 multi-horizontal" data-for="name">
-                                <input type="text" class="form-control input" name="name" data-form-field="Name" placeholder="Your Name" required="" id="name-form4-m">
-                            </div>
-                            <div class="col-md-6 multi-horizontal" data-for="phone">
-                                <input type="text" class="form-control input" name="phone" data-form-field="Phone" placeholder="Phone" required="" id="phone-form4-m">
-                            </div>
-                            <div class="col-md-12" data-for="email">
-                                <input type="text" class="form-control input" name="email" data-form-field="Email" placeholder="Email" required="" id="email-form4-m">
-                            </div>
-                            <div class="col-md-12" data-for="message">
-                                <textarea class="form-control input" name="message" rows="3" data-form-field="Message" placeholder="Message" style="resize:none" id="message-form4-m"></textarea>
-                            </div>
-                            <div class="input-group-btn col-md-12" style="margin-top: 10px;">
-                                <button href="" type="submit" class="btn btn-primary btn-form display-4">SEND MESSAGE</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>-->
-
 <section once="" class="cid-qYhiUkpSEY" id="footer7-13">
-
-
-
-
-
     <div class="container">
-        <div class="media-container-row align-center mbr-white">
+        <div class="media-container-row align-center">
             <div class="row row-links">
                 <ul class="foot-menu">
-
-
-
-
 
                 <li class="foot-menu-item mbr-fonts-style display-7">
                         <a class="text-white mbr-bold" href="#" target="_blank">About us</a>
@@ -517,13 +259,7 @@
             </div>
             <div class="row social-row">
                 <div class="social-list align-right pb-2">
-
-
-
-
-
-
-                <div class="soc-item">
+                  <div class="soc-item">
                         <a href="https://twitter.com/mobirise" target="_blank">
                             <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
                         </a>

@@ -41,4 +41,4 @@
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.18/af-2.3.0/b-1.5.2/sc-1.5.0/sl-1.2.6/datatables.min.js"></script>
 
 @yield('dependencies')
-</html>1
+</html>

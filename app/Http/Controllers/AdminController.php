@@ -132,7 +132,7 @@ class AdminController extends Controller
         $courses = Course::all();
         return view('admin.pages.courses', ['courses' => $courses]);
     }
-    public function editCourse(Request $request)
+    public function editCourse(Request $request,$id)
     {
         //Write appropriate logic
     }
