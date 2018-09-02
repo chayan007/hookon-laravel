@@ -84,7 +84,7 @@
                 </div>
                 <div class="form-group">
                 <label for="">Start Date</label>
-                <input type="text" class="form-control" name="start_date" id="" aria-describedby="helpId" placeholder="Enter the skills (separated by comma)">
+                <input type="date" class="form-control" name="start_date" id="" aria-describedby="helpId" placeholder="Enter the skills (separated by comma)">
                 <small id="helpId" class="form-text text-muted">Just to make Interns know when to start the work</small>
                 </div>
                 <div class="form-group">

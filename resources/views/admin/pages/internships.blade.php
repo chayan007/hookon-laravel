@@ -19,7 +19,7 @@
                   <th>Serial No.</th>
                   <th>Company</th>
                   <th>Profile</th>
-                  <th>EMail</th>
+                  <th>Email</th>
                   <th>Logo</th>
                   <th>URL</th>
                   <th>Phone</th>
@@ -89,10 +89,18 @@
                                       <div class="form-group">
                                       <label for="">Location</label>
                                       <input type="text" class="form-control" value="{{$internship->location}}" name="location" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                    </div>
+                                      <div class="form-group">
+                                      <label for="">Start Date</label>
+                                      <input type="date" class="form-control" name="start_date" value="{{$internship->start_date}}" id="" aria-describedby="helpId" placeholder="Enter the skills (separated by comma)">
                                       </div>
                                       <div class="form-group">
                                       <label for="">Stipend</label>
-                                      <input type="number" class="form-control" value="{{$internship->stipend}}" name="stipend" id="" aria-describedby="helpId" placeholder="{{Auth::user()->name}}">
+                                      <input type="number" class="form-control" value="{{$internship->stipend}}" name="stipend" id="" aria-describedby="helpId" placeholder="Enter the Monthly stipend">
+                                      </div>
+                                      <div class="form-group">
+                                      <label for="">Perks</label>
+                                      <input type="number" class="form-control" name="perks" value="{{$internship->perks}}" id="" aria-describedby="helpId" placeholder="Enter the skills (separated by comma)">
                                       </div>
                                       </div>
                                       <div class="modal-footer">
@@ -120,7 +128,7 @@
                   <th>Serial No.</th>
                   <th>Company</th>
                   <th>Profile</th>
-                  <th>EMail</th>
+                  <th>Email</th>
                   <th>Logo</th>
                   <th>URL</th>
                   <th>Phone</th>

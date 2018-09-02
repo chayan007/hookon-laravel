@@ -31,6 +31,7 @@
 
 </head>
 <body class="skin-red layout-top-nav">
+
     <div class="wrapper">
 
         @include('layouts.header')

@@ -2,14 +2,15 @@
 @section('page_name','Homepage | Hookon Internships')
 @section('content')
 
-
+<div class="splash">
+  <div class="splash-content">
+    <img src="{{asset('assets/ExtraAssets/hookon.svg')}}" />
+    <h3>Hookon Internships</h3>
+  </div>
+</div>
 
 <section class="cid-qQriDf8GmN pb-1" style="background-color: #fff;background-image: url(assets/ExtraAssets/hero.jpg); background-position: 50% 50%; background-size: cover;">
-
-
-
-    <div class="y" style="opacity: 0.3; background-color: rgb(35, 35, 35);"></div>
-
+   <div class="y" style="opacity: 0.3; background-color: rgb(35, 35, 35);"></div>
     <div class="container">
         <div class="row">
             <div class="mbr-white col-md-10 mb-5">
