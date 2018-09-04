@@ -2,11 +2,11 @@
     <nav class="navbar navbar-static-top">
       <div class="container-fluid">
         <div class=" container-fluid navbar-header">
-          <a href="/" class="navbar-brand pull-left"><b>Hookon</b>&nbsp;Internships</a>
+          <a href="/" class="navbar-brand pull-left"><img src="{{asset('assets/ExtraAssets/hookon1.png')}}" height="30"/></a>
           <button style="padding:7px 12px;background-color:#D95058;" class="navbar-toggle collapsed mob-button pull-right" data-toggle="collapse" data-target="#navbar-collapse">
             <i style="color:#fff;" class="fa fa-bars"></i>
           </button>
-          <div class="fullscreen-dropdown dropdown show pull-right" style="color:#fff; padding:8px 15px;">
+          <div class="fullscreen-dropdown dropdown show pull-right" style="color:#fff; padding:9px 15px;">
             <a class="dropdown-toggle" style="color:#fff;" class="navbar-brand" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <strong>Login</strong>
             </a>
@@ -17,7 +17,7 @@
             </div>
           </div>
 
-          <div class="fullscreen-dropdown dropdown show pull-right" style="padding:8px 15px;">
+          <div class="fullscreen-dropdown dropdown show pull-right" style="padding:9px 15px;">
             <a class="dropdown-toggle" style="color:#fff;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <strong>Register</strong>
             </a>

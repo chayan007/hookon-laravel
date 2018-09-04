@@ -4,8 +4,8 @@
 
 <div class="splash">
   <div class="splash-content">
-    <img src="{{asset('assets/ExtraAssets/hookon.svg')}}" />
-    <h3>Hookon Internships</h3>
+    <img src="{{asset('assets/ExtraAssets/hookon1.png')}}" height="50" />
+    <h3>Loading..</h3>
   </div>
 </div>
 
