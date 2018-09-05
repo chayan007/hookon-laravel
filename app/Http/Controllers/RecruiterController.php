@@ -52,6 +52,9 @@ class RecruiterController extends Controller
       $internship->location = $request->location;
       $internship->duration = $request->duration;
       $internship->stipend = $request->stipend;
+      $internship->start_date = $request->start_date;
+      $internship->perks = $request->perks;
+      $internship->input = $request->input;
 
       //Check these-
       $internship->user_id = $request->user_id;

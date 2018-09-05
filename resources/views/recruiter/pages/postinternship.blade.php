@@ -69,6 +69,21 @@
                 <small id="helpId" class="form-text text-muted">Just to let Interns know about Company background</small>
                 </div>
                 <div class="form-group">
+                <label for="">Start Date</label>
+                <input type="date" class="form-control" name="start_date" id="" aria-describedby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted">Mention comapny students will be certified from.</small>
+              </div>
+              <div class="form-group">
+                <label for="">No. of Interns required</label>
+                <input type="number" class="form-control" name="input" id="" aria-describedby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted">Mention comapny students will be certified from.</small>
+              </div>
+              <div class="form-group">
+                <label for="">Perks of Internship</label>
+                <input type="text" class="form-control" name="perks" id="" aria-describedby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted">Mention comapny students will be certified from.</small>
+              </div>
+                <div class="form-group">
                   <label for="">Location&nbsp;<span style="color:red;">*</span></label>
                   <select class="form-control" name="location" id="">
 
