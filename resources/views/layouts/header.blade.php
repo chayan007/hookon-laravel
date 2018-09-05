@@ -2,7 +2,7 @@
     <nav class="navbar navbar-static-top">
       <div class="container-fluid">
         <div class=" container-fluid navbar-header">
-          <a href="/" class="navbar-brand pull-left"><img src="{{asset('assets/ExtraAssets/hookon1.png')}}" height="30"/></a>
+          <a href="/" class="navbar-brand pull-left"><img class="navbar-brand-img" src="{{asset('assets/ExtraAssets/hookon1.png')}}"/></a>
           <button style="padding:7px 12px;background-color:#D95058;" class="navbar-toggle collapsed mob-button pull-right" data-toggle="collapse" data-target="#navbar-collapse">
             <i style="color:#fff;" class="fa fa-bars"></i>
           </button>

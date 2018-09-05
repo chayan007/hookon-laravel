@@ -303,3 +303,16 @@ box-shadow: -1px 2px 13px -3px rgba(0,0,0,0.75);
     overflow-x: auto;
     white-space: nowrap;
 }
+/*------ end ------- */
+
+/*----- navbar brand image styles----*/
+.navbar-brand-img{
+  height: 30px;
+}
+@media (max-width: 800px){
+  .navbar-brand-img{
+    height: 20px;
+    width: 60px;
+  }
+}
+/*----------navbar brand image styles end-------*/
