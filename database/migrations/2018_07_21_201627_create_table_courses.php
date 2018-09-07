@@ -24,6 +24,7 @@ class CreateTableCourses extends Migration
             $table->string('domain');
             $table->string('syllabus');
             $table->string('about');
+            $table->integer('vip')->default(0);
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('recruiters');
             $table->unsignedInteger('category_id');

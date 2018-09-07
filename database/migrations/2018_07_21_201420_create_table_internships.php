@@ -30,6 +30,7 @@ class CreateTableInternships extends Migration
             $table->string('start_date');
             $table->string('perks');
             $table->string('input');
+            $table->integer('vip')->default(0);
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('recruiters');
             $table->unsignedInteger('category_id');
