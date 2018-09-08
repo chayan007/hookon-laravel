@@ -8,12 +8,12 @@
     <div class="container">
         <div class="col-md-12 ">
            <div class="row" style="height: 7vh;">
-                <img class="company-main-logo ml-auto mr-auto" src="assets/ExtraAssets/company_placeholder_logo.png">
+                <img class="company-main-logo ml-auto mr-auto" src="{{Storage::url($course->photo_url)}}">
             </div>
-            <h5 class="text-center">Company Name</h5>
-            <h6 class="text-center">company@company.com</h6>
-            <h6 class="text-center">Bangalore, Karnataka</h6><br/>
-            <h3 class="text-center">A.I crash course</h3>
+            <h5 class="text-center">{{ $course->company }}</h5>
+            <h6 class="text-center">{{ $course->course }}</h6>
+            <h6 class="text-center">{{ $course->location }}</h6><br/>
+            <h3 class="text-center">{{ $course->email }}</h3>
 
 
             <br/>
@@ -21,18 +21,18 @@
                 <div class="col-5 col-md-2">
                     <span  style="font-size: 1.1rem;color: #bfbfbf;">Location:</span><br/><br/>
                     <span  style="font-size: 1.1rem;color: #bfbfbf;">Duration:</span><br/><br/>
-                    <span  style="font-size: 1.1rem;color: #bfbfbf;">Start date:</span>
+                    <span  style="font-size: 1.1rem;color: #bfbfbf;">Domain:</span>
                     <br/><br/>
-                    <span  style="font-size: 1.1rem;color: #bfbfbf;">Prerequisites:</span><br/><br/>
+                    <span  style="font-size: 1.1rem;color: #bfbfbf;">Institute URL:</span><br/><br/>
                 </div>
                 <div class="col-7">
-                    <span style="font-size: 1.1rem;"> _training_location_</span>
+                    <span style="font-size: 1.1rem;"> {{ $course->location }}</span>
                     <br/><br/>
-                    <span style="font-size: 1.1rem;"> _training_duration_</span>
+                    <span style="font-size: 1.1rem;"> {{ $course->duration }}</span>
                     <br/><br/>
-                    <span style="font-size: 1.1rem;"> _training_start_date_</span>
+                    <span style="font-size: 1.1rem;"> {{ $course->domain }}</span>
                     <br/><br/>
-                    <span style="font-size: 1.1rem;"> _training_prereq_</span>
+                    <span style="font-size: 1.1rem;"> {{ $course->url }}</span>
                 </div>
             </div>
 
@@ -46,8 +46,7 @@
 
             <div class="col-md-12 pt-4 pb-3">
                 <h5>About the company:</h5>
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum mi, ut sollicitudin est. Vestibulum ac ultricies dui. Donec nec tempor dui. Etiam consectetur eget justo at commodo. Sed finibus lorem rhoncus magna vulputate, eget tempus ex convallis. Integer nec risus quam. Nulla egestas ex libero, non condimentum sapien sollicitudin at. Morbi vitae massa fringilla, imperdiet ipsum a, commodo elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel facilisis mauris. Cras rhoncus faucibus mi, eget venenatis felis imperdiet maximus. Duis id porta erat.</p>
-                <p class="text-justify">Sed felis leo, volutpat sed massa ac, luctus maximus orci. Vestibulum enim ipsum, euismod eu gravida ut, cursus nec velit. Praesent tincidunt nisl suscipit consequat cursus. Vivamus in sem porttitor, ultricies ante sit amet, faucibus erat. Vivamus sed libero neque. Cras eu convallis purus. Praesent sed facilisis est. Suspendisse aliquam, tellus eu dapibus iaculis, lorem eros ultrices neque, vel eleifend justo odio eu nunc. Suspendisse ornare, lacus a finibus egestas, magna elit feugiat lacus, ultricies sollicitudin nibh tortor eu lorem. Suspendisse sed sollicitudin turpis, ac venenatis turpis.</p>
+                <p class="text-justify">{{ $course->url }}</p>
              </div>
 
 
@@ -62,9 +61,7 @@
 
 
                         <div class="row">
-                          @if(Auth::user())
-                             <input type="button" class="btn btn-primary col-md-3 ml-auto mr-auto col-10 font-weight-bold mb-5" value="I'm interested" name="submit" target="_blank" data-toggle="modal" data-target="#ModalCenter" >
-                          @endif
+                            <a name="" id="" class="btn btn-primary col-md-3 ml-auto mr-auto col-10 font-weight-bold mb-5" href="#" role="button"></a>
                         </div>
 
           </div>

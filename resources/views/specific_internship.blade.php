@@ -8,7 +8,7 @@
     <div class="container">
         <div class="col-md-12 pb-4">
            <div class="row" style="height: 7vh;">
-                <img class="company-main-logo ml-auto mr-auto" src="{{$internship->logo_url}}">
+                <img class="company-main-logo ml-auto mr-auto" src="{{Storage::url($internship->logo_url)}}">
             </div>
             <h5 class="text-center">{{$internship->company}}</h5>
             <h6 class="text-center">{{$internship->location}}</h6><br/>
@@ -32,7 +32,7 @@
                     <br/><br/>
                     <span style="font-size: 1.1rem;"> {{$internship->duration}} months</span>
                     <br/><br/>
-                    <span style="font-size: 1.1rem;"> Internship start date</span>
+                    <span style="font-size: 1.1rem;"> {{$internship->start_date}}</span>
                     <br/><br/>
                     <span style="font-size: 1.1rem;"> {{$internship->skills}}</span>
                 </div>
@@ -73,24 +73,15 @@
 
          <div class="pt-4">
             <div class="col-md-4">
-                <h5 class="pb-3">Eligibility Criteria:</h5>
-                <ul class="text-left ml-auto mr-auto">
-                  <li>Coffee</li>
-                  <li>Tea</li>
-                  <li>Milk</li>
-                  <li>Something else that you need to find out</li>
-                </ul>
-                <h5 class="pb-3">No of internships available: 5</h5>
+                <h5 class="pb-3">No of internships available: {{$internship->input}}</h5>
 
-                <p><span class="h5 pb-5 pr-2">Perks:</span>Certificates, Letter of Recommendation, Free Lunch, 24/7 Free wifi</p>
+                <p><span class="h5 pb-5 pr-2">Perks:</span>{{$internship->perks}}</p>
 
              </div>
 
              <div class="container">
                 <div class="row">
-                  @if(Auth::user())
-                     <input type="submit" class="btn btn-primary col-md-4 col-10 font-weight-bold mb-5 ml-auto mr-auto" value="Apply now" name="submit">
-                  @endif
+                     <a name="apply" id="" class="btn btn-primary col-md-4 col-10 font-weight-bold mb-5 ml-auto mr-auto" href="/student/apply/{{$internship->id}}" role="button">Apply Now</a>
                  </div>
              </div>
 

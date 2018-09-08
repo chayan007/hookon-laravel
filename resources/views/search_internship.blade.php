@@ -55,7 +55,7 @@
          <div class="p-3 col-12 col-lg-4 ">
              <div class="pb-3 pt-3" style="background-color: #fff;">
                 <div class="row">
-                     <img src="{{asset($view_internship->logo_url)}}" class="search-images" class="search-cards-style" style="margin: 0 auto;height: 120px;width: 120px; border-radius: 50%;border: 5px solid #D84F57">
+                     <img src="{{Storage::url($view_internship->logo_url)}}" class="search-images" class="search-cards-style" style="margin: 0 auto;height: 120px;width: 120px; border-radius: 50%;border: 5px solid #D84F57">
                 </div>
 
 
@@ -74,10 +74,10 @@
                      Duration: {{$view_internship->duration}}
                  </p>
                  <p class="mbr-text-intenship mbr-fonts-style display-7">
-                    No of Stipends: {{$view_internship->stipend}}
+                    No of Interns: {{$view_internship->input}}
                  </p>
                  <p class="mbr-text-intenship mbr-fonts-style display-7">
-                     Starts from : 12/12/18
+                     Starts from : {{$view_internship->start_date}}
                  </p>
                  <div class="buttonlist col-md-12 col-12 pt-4" >
                     <div class="row">
