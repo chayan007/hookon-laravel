@@ -49,7 +49,10 @@
                 <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum mi, ut sollicitudin est. Vestibulum ac ultricies dui. Donec nec tempor dui. Etiam consectetur eget justo at commodo. Sed finibus lorem rhoncus magna vulputate, eget tempus ex convallis. Integer nec risus quam. Nulla egestas ex libero, non condimentum sapien sollicitudin at. Morbi vitae massa fringilla, imperdiet ipsum a, commodo elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel facilisis mauris. Cras rhoncus faucibus mi, eget venenatis felis imperdiet maximus. Duis id porta erat.</p>
                 <p class="text-justify">Sed felis leo, volutpat sed massa ac, luctus maximus orci. Vestibulum enim ipsum, euismod eu gravida ut, cursus nec velit. Praesent tincidunt nisl suscipit consequat cursus. Vivamus in sem porttitor, ultricies ante sit amet, faucibus erat. Vivamus sed libero neque. Cras eu convallis purus. Praesent sed facilisis est. Suspendisse aliquam, tellus eu dapibus iaculis, lorem eros ultrices neque, vel eleifend justo odio eu nunc. Suspendisse ornare, lacus a finibus egestas, magna elit feugiat lacus, ultricies sollicitudin nibh tortor eu lorem. Suspendisse sed sollicitudin turpis, ac venenatis turpis.</p>
              </div>
-
+             <div class="col-md-12 pt-4 pb-3">
+                 <h5>Syllabus:</h5>
+                 <p class="text-justify">Lorem Ipsum1, Lorem Ipsum2, Lorem Ipsum3, Lorem Ipsum3, Lorem Ipsum4, Lorem Ipsum5, Lorem Ipsum6</p>
+              </div>
 
         </div>
 </section>

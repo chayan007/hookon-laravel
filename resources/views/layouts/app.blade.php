@@ -30,7 +30,7 @@
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.js"></script>
 
 </head>
-<body class="skin-red layout-top-nav">
+<body class="layout-top-nav" style="background-color:#D95058;">
 
     <div class="wrapper">
 

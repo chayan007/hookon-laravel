@@ -9,14 +9,14 @@
   </div>
 </div>
 
-<section class="cid-qQriDf8GmN pb-1" style="background-color: #fff;background-image: url(assets/ExtraAssets/hero.jpg); background-position: 50% 50%; background-size: cover;">
+<section class="cid-qQriDf8GmN pb-1" style="background-color: #fff;">
    <div class="y" style="opacity: 0.3; background-color: rgb(35, 35, 35);"></div>
     <div class="container">
         <div class="row">
             <div class="mbr-white col-md-10 mb-5">
-                <h3 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style" style="color: #fff;">Connecting Talents and Companies</h3>
+                <h3 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style" style="color: #000;">Connecting Talents and Companies</h3>
                 <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" href="/search_internships">I NEED INTERNSHIPS</a>
-                    <a class="btn btn-md btn-white-outline display-4" style="border:1px solid #fff;" href="/search_course">I NEED SKILLS</a></div>
+                    <a class="btn btn-md btn-white-outline display-4" style="color:#000;border:1px solid #000;" href="/search_course">I NEED SKILLS</a></div>
             </div>
         </div>
     </div>

@@ -27,6 +27,12 @@
               <a class="dropdown-item" href="/recruiter/register">Recruiter Register</a>
             </div>
           </div>
+
+          <div class="pull-right" style="padding:9px 15px;">
+            <a class="" style="color:#fff;" href="/student/profile" >
+              <strong>Dashboard</strong>
+            </a>
+          </div>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
