@@ -48,36 +48,26 @@
 
 
     <div class="container">
-       <div class="row">
 
-         @foreach($view_course as $view_course)
-
-            <div class="p-3 col-12 col-lg-4 ">
+       @foreach($view_course as $view_course)
+            <div class="p-3 col-12 col-lg-8 mx-auto">
                 <div class="pb-3 pt-3" style="background-color: #fff;">
-                   <div class="row">
-                        <img src="assets/ExtraAssets/comapny-placeholder.png" class="search-images" class="search-cards-style" style="margin: 0 auto;height: 120px;width: 120px; border-radius: 50%;border: 5px solid #D84F57">
+                   <div class="float-right mr-5">
+                        <img src="assets/ExtraAssets/comapny-placeholder.png" class="search-images img-fluid" style="margin: 0 auto; border-radius: 50%;border: 5px solid #D95058">
                    </div>
-
-
                 </div>
-                <div class="card-box p-3" >
-                    <h4 class="card-title py-3 mbr-fonts-style display-7">
-                        Company: {{$view_course->company}}
+                <div class="card-box p-3">
+                    <h4 class="card-title py-3 mbr-fonts-style display-5">
+                          Web Development Internship Full stack
                     </h4>
-                    <p class="card-title mbr-text mbr-fonts-style display-7">
-                        Course: {{$view_course->course}}
+                    <p class=" mbr-text mbr-fonts-style display-5">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i> Kolkata
                     </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-6">
-                        Location : {{$view_course->location}}
+                    <p class="mbr-text-intenship mbr-fonts-style display-5">
+                       <i class="fa fa-clock-o" aria-hidden="true"></i> 2 months
                     </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Domain: {{$view_course->domain}}
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Duration : 2 months
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Starts from : 12/12/18
+                    <p class="mbr-text-intenship mbr-fonts-style display-5">
+                        Starts from: 12/12/18
                     </p>
                     <div class="buttonlist col-md-12 col-12 pt-4" >
                        <div class="row">
@@ -91,177 +81,73 @@
                     </div>
                 </div>
             </div>
+         @endforeach
 
-            @endforeach
-
-            <div class="p-3 col-12 col-lg-4 ">
-                <div class="pb-3 pt-3" style="background-color: #fff;">
-                   <div class="row">
-                        <img src="assets/ExtraAssets/comapny-placeholder.png" class="search-images" class="search-cards-style" style="margin: 0 auto;height: 120px;width: 120px; border-radius: 50%;border: 5px solid #D84F57">
-                   </div>
-
-
+         <div class="p-3 col-12 col-lg-8 mx-auto">
+             <div class="pb-3 pt-3" style="background-color: #fff;">
+                <div class="float-right mr-5">
+                     <img src="assets/ExtraAssets/comapny-placeholder.png" class="search-images img-fluid" style="margin: 0 auto; border-radius: 50%;border: 5px solid #D95058">
                 </div>
-                <div class="card-box p-3">
-                    <h4 class="card-title py-3 mbr-fonts-style display-7">
-                        _Company Name_
-                    </h4>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                       _Internship Profile_
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-6">
-                        Location :
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Duration :
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Stipend :
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Starts from :
-                    </p>
-                    <div class="buttonlist col-md-12 col-12 pt-4" >
-                       <div class="row">
-                            <a class="btn btn-primary ml-0 mr-2" style="width: 50%;" href="#" role="button">
-                                <span class="fa fa-bookmark"></span>
-                            </a>
-                            <a class="btn btn-primary ml-0 mr-0" style="width: 46.8%;" href="#" role="button">
-                                <span class="fa fa-eye"></span>
-                            </a>
-                        </div>
-                    </div>
+             </div>
+             <div class="card-box p-3">
+                 <h4 class="card-title py-3 mbr-fonts-style display-5">
+                       Web 1
+                 </h4>
+                 <p class=" mbr-text mbr-fonts-style display-5">
+                     <i class="fa fa-map-marker" aria-hidden="true"></i> Kolkata
+                 </p>
+                 <p class="mbr-text-intenship mbr-fonts-style display-5">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> 2 months
+                 </p>
+                 <p class="mbr-text-intenship mbr-fonts-style display-5">
+                     Starts from: 12/12/18
+                 </p>
+                 <div class="buttonlist col-md-12 col-12 pt-4" >
+                    <div class="row">
+                         <a class="btn btn-primary ml-0 mr-2" style="width: 50%;" href="#" role="button">
+                             Details
+                         </a>
+                         <a class="btn btn-primary ml-0 mr-0" style="width: 46.8%;" href="#" role="button">
+                             Apply
+                         </a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+         <div class="p-3 col-12 col-lg-8 mx-auto">
+             <div class="pb-3 pt-3" style="background-color: #fff;">
+                <div class="float-right mr-5">
+                     <img src="assets/ExtraAssets/comapny-placeholder.png" class="search-images img-fluid" style="margin: 0 auto; border-radius: 50%;border: 5px solid #D95058">
                 </div>
-            </div>
+             </div>
+             <div class="card-box p-3">
+                 <h4 class="card-title py-3 mbr-fonts-style display-5">
+                       Web2
+                 </h4>
+                 <p class=" mbr-text mbr-fonts-style display-5">
+                     <i class="fa fa-map-marker" aria-hidden="true"></i> Kolkata
+                 </p>
+                 <p class="mbr-text-intenship mbr-fonts-style display-5">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> 2 months
+                 </p>
+                 <p class="mbr-text-intenship mbr-fonts-style display-5">
+                     Starts from: 12/12/18
+                 </p>
+                 <div class="buttonlist col-md-12 col-12 pt-4" >
+                    <div class="row">
+                         <a class="btn btn-primary ml-0 mr-2" style="width: 50%;" href="#" role="button">
+                             Details
+                         </a>
+                         <a class="btn btn-primary ml-0 mr-0" style="width: 46.8%;" href="#" role="button">
+                             Apply
+                         </a>
+                     </div>
+                 </div>
+             </div>
+         </div>
 
-
-            <div class="p-3 col-12 col-lg-4 ">
-                <div class="pb-3 pt-3" style="background-color: #fff;">
-                   <div class="row">
-                        <img src="assets/ExtraAssets/comapny-placeholder.png" class="search-images" class="search-cards-style" style="margin: 0 auto;height: 120px;width: 120px; border-radius: 50%;border: 5px solid #D84F57">
-                   </div>
-
-
-                </div>
-                <div class="card-box p-3">
-                    <h4 class="card-title py-3 mbr-fonts-style display-7">
-                        _Company Name_
-                    </h4>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                       _Internship Profile_
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-6">
-                        Location :
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Duration :
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Stipend :
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Starts from :
-                    </p>
-                    <div class="buttonlist col-md-12 col-12 pt-4" >
-                       <div class="row">
-                            <a class="btn btn-primary ml-0 mr-2" style="width: 50%;" href="#" role="button">
-                                <span class="fa fa-bookmark"></span>
-                            </a>
-                            <a class="btn btn-primary ml-0 mr-0" style="width: 46.8%;" href="#" role="button">
-                                <span class="fa fa-eye"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-             <div class="cards p-3 col-12 col-lg-4 ">
-                <div class="pb-3 pt-3" style="background-color: #fff;">
-                   <div class="row">
-                        <img src="assets/ExtraAssets/comapny-placeholder.png" class="search-images" class="search-cards-style" style="margin: 0 auto;height: 120px;width: 120px; border-radius: 50%;border: 5px solid #D84F57">
-                   </div>
-
-
-                </div>
-                <div class="card-box p-3">
-                    <h4 class="card-title py-3 mbr-fonts-style display-7">
-                        _Company Name_
-                    </h4>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                       _Internship Profile_
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-6">
-                        Location :
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Duration :
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Stipend :
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Starts from :
-                    </p>
-                    <div class="buttonlist col-md-12 col-12 pt-4" >
-                       <div class="row">
-                            <a class="btn btn-primary ml-0 mr-2" style="width: 50%;" href="#" role="button">
-                                <span class="fa fa-bookmark"></span>
-                            </a>
-                            <a class="btn btn-primary ml-0 mr-0" style="width: 46.8%;" href="#" role="button">
-                                <span class="fa fa-eye"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-             <div class="cards p-3 col-12 col-lg-4 ">
-                <div class="pb-3 pt-3" style="background-color: #fff;">
-                   <div class="row">
-                        <img src="assets/ExtraAssets/comapny-placeholder.png" class="search-images" class="search-cards-style" style="margin: 0 auto;height: 120px;width: 120px; border-radius: 50%;border: 5px solid #D84F57">
-                   </div>
-
-
-                </div>
-                <div class="card-box p-3">
-                    <h4 class="card-title py-3 mbr-fonts-style display-7">
-                        _Company Name_
-                    </h4>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                       _Internship Profile_
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-6">
-                        Location :
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Duration :
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Stipend :
-                    </p>
-                    <p class="mbr-text-intenship mbr-fonts-style display-7">
-                        Starts from :
-                    </p>
-                    <div class="buttonlist col-md-12 col-12 pt-4" >
-                       <div class="row">
-                            <a class="btn btn-primary ml-0 mr-2" style="width: 50%;" href="#" role="button">
-                                <span class="fa fa-bookmark"></span>
-                            </a>
-                            <a class="btn btn-primary ml-0 mr-0" style="width: 46.8%;" href="#" role="button">
-                                <span class="fa fa-eye"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            </div>
-
-          </div>
-
-
-
-
+       </div>
 </section>
 
 <section once="" class="cid-qYhiUkpSEY" id="footer7-13">

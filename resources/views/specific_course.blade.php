@@ -48,7 +48,10 @@
                 <h5>About the company:</h5>
                 <p class="text-justify">{{ $course->about }}</p>
              </div>
-
+             <div class="col-md-12 pt-4 pb-3">
+                 <h5>Syllabus:</h5>
+                 <p class="text-justify">Lorem Ipsum1, Lorem Ipsum2, Lorem Ipsum3, Lorem Ipsum3, Lorem Ipsum4, Lorem Ipsum5, Lorem Ipsum6</p>
+              </div>
 
         </div>
 </section>
