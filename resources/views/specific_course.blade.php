@@ -46,7 +46,7 @@
 
             <div class="col-md-12 pt-4 pb-3">
                 <h5>About the company:</h5>
-                <p class="text-justify">{{ $course->url }}</p>
+                <p class="text-justify">{{ $course->about }}</p>
              </div>
 
 
