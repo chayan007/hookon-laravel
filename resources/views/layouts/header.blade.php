@@ -11,7 +11,7 @@
               <strong>Login</strong>
             </a>
 
-            <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuLink">
+            <div class="dropdown-menu ml-3" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="/student/login">Student Login</a>
               <a class="dropdown-item" href="/recruiter/login">Recruiter Login</a>
             </div>
@@ -37,8 +37,8 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse">
-          <div class="mobile-dropdown show" style="color:#fff; padding:8px 15px;">
-            <a class="dropdown-toggle" style="color:#fff;" class="navbar-brand" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="mobile-dropdown" style="color:#fff;">
+            <a class="dropdown-toggle pull-right" style="color:#fff;" class="navbar-brand" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <strong>Login</strong>
             </a>
 
@@ -48,8 +48,8 @@
             </div>
           </div>
 
-          <div class="mobile-dropdown show" style="padding:8px 15px;">
-            <a class="dropdown-toggle" style="color:#fff;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="mobile-dropdown" >
+            <a class="dropdown-toggle pull-left" style="color:#fff;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <strong>Register</strong>
             </a>
 
