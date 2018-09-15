@@ -29,7 +29,7 @@
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+                <img src="{{Storage::url(Auth::user()->photo_url)}}" class="img-circle" alt="User Image">
 
                 <p>
                   {{Auth::user()->name}}
