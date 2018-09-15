@@ -18,9 +18,9 @@ class CreateTableInterns extends Migration
             $table->integer('internship_id');
             $table->string('company');
             $table->string('profile');
-            $table->string('recruiter_id');
+            $table->unsignedInteger('recruiter_id');
             $table->foreign('recruiter_id')->references('id')->on('recruiters');
-            $table->string('student_id');
+            $table->unsignedInteger('student_id');
             $table->foreign('student_id')->references('id')->on('students');
             $table->dateTime('applied_at');
             $table->string('status');

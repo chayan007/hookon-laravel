@@ -64,6 +64,9 @@ class StudentController extends Controller
     }
     public function applyInternship($id)
     {
+        $internship = Internship::where('id',$id)->firstOrFail();
+        $intern = new Intern;
+        dd(user());
 
     }
 }
