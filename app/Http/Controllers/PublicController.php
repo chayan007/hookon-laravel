@@ -54,24 +54,4 @@ class PublicController extends Controller
         $course = Course::where('id', $id)->firstOrFail();
         return view('specific_course', ['course' => $course]);
     }
-    public function sort_courses(Request $request)
-    {
-        if ($request == null) {
-            $view_course = Course::all();
-            return view('search_course')->with('view_course', $view_course);
-        } else if ($request->category == null) {
-            $view_course = Course::where('location', $request->location);
-            return view('search_course')->with('view_course', $view_course);
-        } else if ($request->location == null) {
-            $view_course = Course::where('category', $request->category);
-            return view('search_course')->with('view_course', $view_course);
-        } else {
-            $view_course = Course::where([
-                ['category', '=', $request->category],
-                ['location', '=', $request->location],
-            ]);
-            return view('search_course')->with('view_course', $view_course);
-        }
-
-    }
 }
