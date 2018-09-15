@@ -62,4 +62,8 @@ class StudentController extends Controller
     {
 
     }
+    public function applyInternship($id)
+    {
+
+    }
 }

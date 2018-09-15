@@ -77,7 +77,7 @@
                     No of Interns: {{$view_internship->input}}
                  </p>
                  <p class="mbr-text-intenship mbr-fonts-style display-7">
-                     Starts from : {{$view_internship->start_date}}
+                     Starts from : {{$view_internship->start_date  }}
                  </p>
                  <div class="buttonlist col-md-12 col-12 pt-4" >
                     <div class="row">

@@ -21,3 +21,5 @@ Route::get('/support', function () {
     return view('student.pages.support');
 })->name('support');
 Route::post('/edit', 'StudentController@support');
+Route::get('/apply/{id}','StudentController@applyInternship');
+
