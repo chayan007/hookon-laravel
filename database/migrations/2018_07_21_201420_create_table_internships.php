@@ -18,7 +18,7 @@ class CreateTableInternships extends Migration
             $table->string('company');
             $table->string('profile');
             $table->string('email');
-            $table->string('logo_url');
+            $table->string('logo_url')->nullable();
             $table->string('url');
             $table->string('phone');
             $table->string('skills');

@@ -80,6 +80,7 @@ Route::group(['prefix' => 'student'], function () {
   Route::post('/password/reset', 'StudentAuth\ResetPasswordController@reset')->name('password.email');
   Route::get('/password/reset', 'StudentAuth\ForgotPasswordController@showLinkRequestForm')->name('password.reset');
   Route::get('/password/reset/{token}', 'StudentAuth\ResetPasswordController@showResetForm');
+  Route::get('/apply/{id}', 'StudentController@applyInternship');
 
 
 
