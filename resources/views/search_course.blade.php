@@ -58,7 +58,7 @@
                 </div>
                 <div class="card-box p-3">
                     <h4 class="card-title py-3 mbr-fonts-style display-5">
-                          Web Development Internship Full stack
+                          {{$view_course->course}}
                     </h4>
                     <p class=" mbr-text mbr-fonts-style display-5">
                         <i class="fa fa-map-marker" aria-hidden="true"></i> Kolkata
@@ -83,7 +83,7 @@
             </div>
          @endforeach
 
-         <div class="p-3 col-12 col-lg-8 mx-auto">
+         <!--<div class="p-3 col-12 col-lg-8 mx-auto">
              <div class="pb-3 pt-3" style="background-color: #fff;">
                 <div class="float-right mr-5">
                      <img src="assets/ExtraAssets/comapny-placeholder.png" class="search-images img-fluid" style="margin: 0 auto; border-radius: 50%;border: 5px solid #D95058">
@@ -145,7 +145,7 @@
                      </div>
                  </div>
              </div>
-         </div>
+         </div>-->
 
        </div>
 </section>

@@ -54,8 +54,8 @@
                 <small id="fileHelpId" class="form-text text-muted">Just to add attractiveness to your brand.</small>
               </div>
               <div class="form-group">
-                <label for="">Domain</label>
-                <input type="text" class="form-control" name="domain" id="" aria-describedby="helpId" placeholder="">
+                <label for="">Category</label>
+                <input type="text" class="form-control" name="category" id="" aria-describedby="helpId" placeholder="">
                 <small id="helpId" class="form-text text-muted">(Web Dev, AI, Big Data, blah, blah)</small>
               </div>
               <div class="form-group">
