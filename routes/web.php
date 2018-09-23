@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('index');
 });
 Route::post('/search_internships', 'PublicController@view_internship');
+Route::get('/pricing', function(){
+  return view('recruiter_pricing');
+});
 Route::get('/search_internships', 'PublicController@view_internship');
 Route::post('/search_course','PublicController@view_courses');
 Route::get('/search_course', 'PublicController@view_courses');
