@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Student;
+use App\Internship;
+use App\Intern;
 use Hash;
 
 class StudentController extends Controller
@@ -64,6 +66,11 @@ class StudentController extends Controller
     }
     public function applyInternship($id)
     {
+        $internship = Internship::where('id',$id)->firstOrFail();
+        $intern = new Intern;
+        $intern->internship_id = $internship->id;
+        $intern->company = $internship->company;
+        $intern->profile = $internship->profile;
 
     }
 }

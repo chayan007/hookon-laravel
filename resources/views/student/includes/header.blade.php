@@ -38,7 +38,7 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Home</a>
+                  <a href="/" class="btn btn-default btn-flat">Home</a>
                 </div>
                 <div class="pull-right">
                   <a href="/student/logout" class="btn btn-default btn-flat">Sign out</a>

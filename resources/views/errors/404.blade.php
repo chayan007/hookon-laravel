@@ -19,7 +19,7 @@
       <p>Page not found</p>
       <div class="buttons-con">
         <div class="action-link-wrap">
-          <a href="http://hookon.in" class="link-button">Go to Home Page</a>
+          <a href="/" class="link-button">Go to Home Page</a>
         </div>
       </div>
     </div>
