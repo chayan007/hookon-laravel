@@ -8,6 +8,7 @@ use App\Student;
 use App\Internship;
 use App\Intern;
 use Hash;
+use Carbon\Carbon;
 
 class StudentController extends Controller
 {
@@ -71,6 +72,12 @@ class StudentController extends Controller
         $intern->internship_id = $internship->id;
         $intern->company = $internship->company;
         $intern->profile = $internship->profile;
+        $intern->recruiter_id = $internship->user_id;
+        $intern->student_id = Auth::user()->id;
+        $intern->applied_at = Carbon::now();
+        $intern->status = 'Applied';
+        $intern->save();
+        return redirect('/search_internships')->with('status','Successfully Applied for '.$intern->company);
 
     }
 }
