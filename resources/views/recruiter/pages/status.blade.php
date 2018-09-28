@@ -22,21 +22,22 @@
                 <thead>
                 <tr>
                   <th>Serial No.</th>
-                  <th>Company</th>
+                  <th>Name</th>
                   <th>Profile</th>
-                  <th>Applicant</th>
+                  <th>Email</th>
                   <th>Applicant CV</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
                 </thead>
                 <tbody id="dataset">
+                    @foreach ($interns as $intern)
                 <tr>
-                  <td>Trident</td>
-                  <td>InternetExplorer 4.0</td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>CV hot</td>
+                  <td>{{$loop->iteration}}</td>
+                  <td>{{$students->where('id',$intern->student_id)->first()->name}}</td>
+                  <td>{{$intern->profile}}</td>
+                  <td>{{$students->where('id',$intern->student_id)->first()->email}}</td>
+                  <td><a href="{{$students->where('id',$intern->student_id)->first()->cv_url}}">Click Here</a></td>
                   <td>
                       <form action="/recruiter/changeStatus/{{$intern->id}}" method="POST">
                           @csrf
@@ -53,6 +54,7 @@
                       </form>
                   </td>
                 </tr>
+                    @endforeach
                 </tbody>
                 <tfoot>
                <tr>

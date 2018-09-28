@@ -12,11 +12,9 @@ Route::get('/home', function () {
 Route::get('/profile',function(){
     return view('student.pages.profile');
 })->name('dashboard');
-Route::get('/edit', 'StudentController@predict');//->name('edit');
+Route::get('/edit', 'StudentController@predict');
 Route::post('/edit1', 'StudentController@edit1');
-Route::get('/status', function () {
-    return view('student.pages.status');
-})->name('status');
+Route::get('/status', 'StudentController@showStatus');
 Route::get('/support', function () {
     return view('student.pages.support');
 })->name('support');

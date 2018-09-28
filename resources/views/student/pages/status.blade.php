@@ -24,12 +24,14 @@
                 </tr>
                 </thead>
                 <tbody id="dataset">
+                    @foreach ($interns as $intern)
                 <tr>
-                  <td>Trident</td>
-                  <td>InternetExplorer 4.0</td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
+                  <td>{{ $loop->iteration }}</td>
+                  <td>{{ $intern->company }}</td>
+                  <td>{{ $intern->profile }}</td>
+                  <td>{{ $intern->status }}</td>
                 </tr>
+                    @endforeach
                 </tbody>
                 <tfoot>
                <tr>

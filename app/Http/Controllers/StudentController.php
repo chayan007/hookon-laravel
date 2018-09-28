@@ -77,7 +77,12 @@ class StudentController extends Controller
         $intern->applied_at = Carbon::now();
         $intern->status = 'Applied';
         $intern->save();
-        return redirect('/search_internships')->with('status','Successfully Applied for '.$intern->company);
+        return redirect('search_internship')->with('status','Successfully Applied for '.$intern->company);
 
+    }
+    public function showStatus()
+    {
+        $interns = Intern::where('student_id',Auth::user()->id)->firstOrFail();
+        return view('student.pages.status',['interns' => $interns]);
     }
 }

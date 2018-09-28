@@ -11,6 +11,8 @@ use App\Category;
 use App\Recruiter;
 use DB;
 use Hash;
+use App\Intern;
+use App\Student;
 
 class RecruiterController extends Controller
 {
@@ -163,6 +165,12 @@ class RecruiterController extends Controller
 
       $recruiter->save();
       return redirect('/recruiter/profile')->with('status','Details have been successfully changed !');
+  }
+  public function getStatus()
+  {
+      $interns = Intern::where('recruiter_id',Auth::user()->id)->get();
+      $students = Student::all();
+      return view('recruiter.pages.status',['interns' => $interns, 'students' => $students]);
   }
   public function changeStatus(Request $request, $id)
   {
