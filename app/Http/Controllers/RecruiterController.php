@@ -25,6 +25,12 @@ class RecruiterController extends Controller
       $locations = Location::all();
       return view('recruiter.pages.postcourse')->with('locations', $locations);
   }
+  public function viewEditCourse(Request $request){
+    $EditCourses = Course::all();
+    $locations = Location::all();
+
+    return view('recruiter.pages.editcourse',['locations' => $locations, 'EditCourses' => $EditCourses]);
+  }
   public function postInternship(Request $request)
   {
 
@@ -71,7 +77,7 @@ class RecruiterController extends Controller
   {
 
       $loc_id = DB::table('locations')->where('location_name',$request->location)->value('id');
-      $cat_id = DB::table('categories')->where('category_name',$request->domain)->value('id');
+      $cat_id = DB::table('categories')->where('category_name',$request->category)->value('id');
 
       //dd($request->desc);
 
@@ -79,15 +85,18 @@ class RecruiterController extends Controller
 
       $course->course = $request->course;
       $course->instructor = $request->instructor;
+
+      if ($request->hasFile('photo')) {
             $file = $request->photo;
             $path = $file->store('public/img/course');
             $course->photo_url = $path;
+      }
       //To fix: File upload and file reflection in UI not working
 
       $course->url = $request->url;
       $course->company = $request->company;
       $course->location = $request->location;
-      $course->domain = $request->domain;
+      $course->domain = $request->category;
       $course->about = $request->about;
       $course->syllabus = $request->syllabus;
 
@@ -114,15 +123,53 @@ class RecruiterController extends Controller
   }
   public function editInternship(Request $request, $id)
   {
-    //Write appropriate logic
+      //Write appropriate logic
+      $loc_id = DB::table('locations')->where('location_name',$request->location)->value('id');
+      $cat_id = DB::table('categories')->where('category_name',$request->profile)->value('id');
+      $curPath = Internship::where('id',$id)->select('logo_url')->get();
+
+      if ($request->hasFile('photo')) {
+        $file = $request->photo;
+        $path = $file->store('public/img/internship');
+      }else{
+        $path = $curPath;
+      }
+
+      Internship::where('id', $id)->update(['company' => $request->company , 'profile' => $request->profile,
+      'email' => $request->email, 'logo_url' => $path, 'url' => $request->url,
+      'phone' => $request->phone,'skills' => $request->skills,  'desc' => $request->desc, 'about' => $request->about,
+      'location' => $request->location,'duration' => $request->duration, 'stipend' => $request->stipend, 'start_date' => $request->start_date,
+      'perks' => $request->perks, 'category_id' => $cat_id,
+     'location_id' => $loc_id ]);
+
+      return redirect('/recruiter/editinternship')->with('status','Course has been Updated !');
   }
   public function editCourse(Request $request, $id)
   {
-    //Write appropriate logic
+    //Write appropriate Logic
+    $loc_id = DB::table('locations')->where('location_name',$request->location)->value('id');
+    $cat_id = DB::table('categories')->where('category_name',$request->category)->value('id');
+    $curPath = Course::where('id',$id)->select('photo_url')->get();
+
+    if ($request->hasFile('photo')) {
+      $file = $request->photo;
+      $path = $file->store('public/img/course');
+    }else{
+      $path = $curPath;
+    }
+
+    Course::where('id', $id)->update(['course' => $request->course , 'instructor' => $request->instructor,
+    'url' => $request->url, 'company' => $request->company, 'instructor' => $request->instructor,
+    'domain' => $request->category,'about' => $request->about,  'syllabus' => $request->syllabus,
+    'photo_url'=>$path,  'category_id' => $cat_id,
+   'location_id' => $loc_id ]);
+
+    return redirect('/recruiter/editcourse')->with('status','Course has been Updated !');
   }
   public function predict()
   {
-      return view('recruiter.pages.edit');
+      $locations = Location::all();
+      return view('recruiter.pages.edit')->with('locations', $locations);
   }
   public function edit(Request $request, $id)
   {

@@ -4,12 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Student;
+use Illuminate\Support\Facades\Auth;
+
 use App\Internship;
 use App\Recruiter;
 use App\Location;
 use App\Intern;
 use App\Course;
 use App\Category;
+use App\Admin;
+use Hash;
 
 class AdminController extends Controller
 {
@@ -135,6 +139,18 @@ class AdminController extends Controller
     public function editCourse(Request $request,$id)
     {
         //Write appropriate logic
+          $course= Course::where('id',$id)->firstOrFail();
+
+          $course->company = $request->name;
+          $course->instructor = $request->email;
+          $course->location = $request->location;
+          $course->url = $request->url;
+          $course->category = $request->category;
+          $course->syllabus = $request->syllabus;
+          $course->about = $request->about;
+          $course->vip = $request->vip;
+
+          $course->save();
     }
     public function deleteCourse($id)
     {
@@ -152,6 +168,32 @@ class AdminController extends Controller
         $interests = Interest::all();
         return view('admin.pages.cstatus', ['interests' => $interests]);
     }
+    public function viewEditPage(){
+      return view('admin.pages.edit');
+    }
+    public function EditAdminDetails(Request $request){
+      try{
+        $admin= Admin::where('id',Auth::user()->id)->firstOrFail();
+      }catch(Exception $e){
+        return redirect('/admin/profile')->with('error','Record Not Found');
+      }
+      //dd($request);
+      $admin->name = $request->name;
+      $admin->email = $request->email;
 
+      if ($request->password != null) {
+          $admin->password = Hash::make($request->password);
+      }
+
+      if ($request->hasFile('photo')) {
+          $file = $request->photo;
+          $path = $file->store('public/images/profile');
+          $admin->photo = $path;
+      }
+
+      $admin->save();
+      return redirect('/admin/admin');
+
+    }
 
 }

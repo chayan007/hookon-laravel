@@ -20,7 +20,7 @@ class CreateTableCourses extends Migration
             $table->string('course');
             $table->string('location');
             $table->string('url');
-            $table->string('photo_url');
+            $table->string('photo_url')->nullable();
             $table->string('domain');
             $table->string('syllabus');
             $table->string('about');

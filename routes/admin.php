@@ -12,10 +12,14 @@ Route::get('/admin', function () {
 })->name('dashboard');
 Route::get('/students', 'AdminController@viewStudent')->name('students');
 
+Route::get('/edit', 'AdminController@viewEditPage');
+Route::post('/edit1', 'AdminController@EditAdminDetails');
+
 Route::get('/recruiters', 'AdminController@viewRecruiter')->name('recruiters');
 Route::get('/internships', 'AdminController@viewInternship')->name('internship');
 Route::get('/istatus', 'AdminController@viewInternshipStatus')->name('internship status');
 Route::get('/courses', 'AdminController@viewCourse')->name('courses');
+Route::post('/courses/edit/{id}', 'AdminController@editCourse');
 Route::get('/cstatus', 'AdminController@viewCourseStatus')->name('courses status');
 Route::get('/settings', 'AdminController@editAdmin')->name('settings');
 Route::post('/category','AdminController@addCategory');

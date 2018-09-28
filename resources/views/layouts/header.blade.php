@@ -8,23 +8,24 @@
           </button>
           <div class="fullscreen-dropdown dropdown show pull-right" style="color:#fff; padding:9px 15px;">
             <a class="dropdown-toggle" style="color:#fff;" class="navbar-brand" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <strong>Login</strong>
+              <strong>Recruiters</strong>
             </a>
 
-            <div class="dropdown-menu ml-3" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="/student/login">Student Login</a>
+            <div class="dropdown-menu mr-5" style="transform: translateX(-8%);" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="/recruiter/register">Recruiter Register</a>
               <a class="dropdown-item" href="/recruiter/login">Recruiter Login</a>
+              <a class="dropdown-item" href="/pricing">Recruiter Plans</a>
             </div>
           </div>
 
           <div class="fullscreen-dropdown dropdown show pull-right" style="padding:9px 15px;">
             <a class="dropdown-toggle" style="color:#fff;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <strong>Register</strong>
+              <strong>Students</strong>
             </a>
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="/student/register">Student Register</a>
-              <a class="dropdown-item" href="/recruiter/register">Recruiter Register</a>
+              <a class="dropdown-item" href="/student/login">Student login</a>
             </div>
           </div>
 
@@ -39,23 +40,24 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <div class="mobile-dropdown" style="color:#fff;">
             <a class="dropdown-toggle pull-right" style="color:#fff;" class="navbar-brand" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <strong>Login</strong>
+                <strong>Recruiters</strong>
             </a>
 
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="/student/login">Student Login</a>
+            <div class="dropdown-menu" style="transform: translateX(-8%);" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="/recruiter/register">Recruiter Register</a>
               <a class="dropdown-item" href="/recruiter/login">Recruiter Login</a>
+              <a class="dropdown-item" href="/pricing">Recruiter Plans</a>
             </div>
           </div>
 
           <div class="mobile-dropdown" >
             <a class="dropdown-toggle pull-left" style="color:#fff;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <strong>Register</strong>
+              <strong>Students</strong>
             </a>
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="/student/register">Student Register</a>
-              <a class="dropdown-item" href="/recruiter/register">Recruiter Register</a>
+              <a class="dropdown-item" href="/student/login">Student login</a>
             </div>
           </div>
         <!-- /.navbar-collapse -->
