@@ -82,7 +82,7 @@ class StudentController extends Controller
     }
     public function showStatus()
     {
-        $interns = Intern::where('student_id',Auth::user()->id)->firstOrFail();
+        $interns = Intern::where('student_id',Auth::user()->id)->get();
         return view('student.pages.status',['interns' => $interns]);
     }
 }
