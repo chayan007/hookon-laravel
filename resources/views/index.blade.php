@@ -15,8 +15,22 @@
         <div class="row">
             <div class="mbr-white col-md-10 mb-5">
                 <h3 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style" style="color: #000;">Connecting Talents and Companies</h3>
-                <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" href="/search_internships">I NEED INTERNSHIPS</a>
-                    <a class="btn btn-md btn-white-outline display-4" style="color:#000;border:1px solid #000;" href="/search_course">I NEED SKILLS</a></div>
+                <div class="mbr-section-btn">
+                  <a class="btn btn-header-internships btn-white-outline" href="/search_internships" style="color:#000;border:1px solid #000;font-size:1.3rem;">
+                    <div>
+                      <img src="{{asset('assets/ExtraAssets/write-board.svg')}}" style="color:#fff;" height="35px" width="35px"/>
+                      <br/>
+                      <strong>Internships</strong>
+                    </div>
+                  </a>
+                  <a class="btn btn-header-courses btn-white-outline" style="color:#000;border:1px solid #000;font-size:1.3rem;" href="/search_course">
+                    <div>
+                      <img src="{{asset('assets/ExtraAssets/resume.svg')}}" style="color:#fff;" height="35px" width="35px"/>
+                      <br/>
+                      <strong>Courses</strong>
+                    </div>
+                  </a>
+                </div>
             </div>
         </div>
     </div>
