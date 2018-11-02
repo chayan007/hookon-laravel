@@ -4,7 +4,7 @@
 
 <div class="splash">
   <div class="splash-content">
-    <img src="{{asset('assets/ExtraAssets/hookon1.png')}}" height="50" />
+    <img src="{{asset('assets/ExtraAssets/HOOKON_white.png')}}" height="50" />
     <h3>Loading..</h3>
   </div>
 </div>

@@ -25,7 +25,7 @@
     </div>
 
     <footer>
-        <img class="img-footer" style="display:block;margin: 0 auto;padding-top:85vh;" height="35px" width="100px" src="{{asset('assets/ExtraAssets/hookon1.png')}}"/>
+        <img class="img-footer" style="display:block;margin: 0 auto;padding-top:85vh;" height="30px" width="100px" src="{{asset('assets/ExtraAssets/HOOKON_white.png')}}"/>
     </footer>
 
   </body>
